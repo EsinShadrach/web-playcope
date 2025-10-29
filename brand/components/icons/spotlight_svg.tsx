@@ -1,0 +1,54 @@
+export function SpotlightSvg() {
+  return (
+    <svg
+      width="985"
+      height="836"
+      viewBox="0 0 985 836"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_f_3437_5785)">
+        <path
+          d="M-173.766 -30.0906L970.555 149.425L611.616 821.304L-173.766 -30.0906Z"
+          fill="url(#paint0_linear_3437_5785)"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_3437_5785"
+          x="-187.666"
+          y="-43.9906"
+          width="1172.12"
+          height="879.194"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="6.95"
+            result="effect1_foregroundBlur_3437_5785"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_3437_5785"
+          x1="-29.2388"
+          y1="-300.623"
+          x2="275.698"
+          y2="-177.967"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#787777" stopOpacity="0.18" />
+          <stop offset="1" stopColor="#121212" stopOpacity="0.17" />
+          {/* <stop stopColor="red" stopOpacity="0.18" /> */}
+          {/* <stop offset="1" stopColor="blue" stopOpacity="0.17" /> */}
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
