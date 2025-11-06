@@ -10,3 +10,4 @@ export * from "./verify";
 export * from "./x_logo";
 export * from "./ball_icon";
 export * from "./spotlight_svg";
+export * from "./arrow-cursor";
