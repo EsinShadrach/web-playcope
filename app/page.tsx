@@ -10,12 +10,14 @@ import {
 } from "@/brand/components/icons";
 import FoundedWhen from "./_components/found-when";
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
+import { WhatIsPlaycope } from "./_components/what-is-playcope";
 
 export default function Home() {
   return (
     <main className="relative mb-20">
       <Spotlight />
       <BoxOfBall />
+      <PlaycopeIsABrand />
       <WhatIsPlaycope />
     </main>
   );
@@ -49,7 +51,7 @@ function Spotlight() {
   );
 }
 
-function WhatIsPlaycope() {
+function PlaycopeIsABrand() {
   return (
     <div className="mt-48">
       <div className="text-center text-white text-5xl font-bold capitalize leading-[74.20px]">

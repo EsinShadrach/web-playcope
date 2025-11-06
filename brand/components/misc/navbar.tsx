@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useRef, useState, useLayoutEffect } from "react";
 import { IconButton } from "@/brand/components/buttons/icon_button";
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 import { InstaLogo, Logo, Star, Verify, XLogo } from "@/brand/components/icons";
+import { useLayoutEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   return (
