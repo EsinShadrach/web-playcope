@@ -8,7 +8,7 @@ export function ArrowCursor(props: React.SVGProps<SVGSVGElement>) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_3437_5720)">
+      <g clipPath="url(#clip0_3437_5720)">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"

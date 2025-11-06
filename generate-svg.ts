@@ -71,4 +71,3 @@ export function ${componentName}(props: React.SVGProps<SVGSVGElement>) {
 const indexContent = exports.join("\n") + "\n";
 fs.writeFileSync(path.join(OUT_DIR, "index.ts"), indexContent);
 console.log("📦 Generated index.ts");
-console.log("🎉 All SVG components generated!");

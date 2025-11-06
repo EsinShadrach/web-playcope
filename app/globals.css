@@ -7,6 +7,7 @@
   --primary: oklch(0.5167 0.2556 263.55);
   --black2: oklch(0.235 0 180);
   --light-black: oklch(0.3523 0 0);
+  --dark-gray: #a1a1a1;
 }
 
 @theme inline {
@@ -15,6 +16,7 @@
   --color-primary: var(--primary);
   --color-black2: var(--black2);
   --color-light-black: var(--light-black);
+  --color-dark-gray: var(--dark-gray);
 
   --font-sans: var(--font-space-grotesk);
 }
