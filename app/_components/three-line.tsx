@@ -20,11 +20,11 @@ export function ThreeLineComponent() {
           <ThreeLine />
         </div>
       </div>
-      <div className="w-[985px] h-[731px] absolute mt-32 z-10 left-1/2 right-1/2 -translate-x-1/2 rounded-full border-[100px] border-neutral-400/5 blur-lg" />
+      <div className="w-[985px] h-[731px] absolute mt-32 z-10 left-1/2 right-1/2 -translate-x-1/2 rounded-full border-100 border-neutral-400/5 blur-lg" />
       <div className="container relative z-20 flex flex-col justify-center px-3 pt-56 mx-auto">
         <PrimaryButton
           label="What We Have Built So Far"
-          className="!bg-black2 text-dark-gray w-fit mx-auto"
+          className="bg-black2! text-dark-gray w-fit mx-auto"
         />
         <div className="relative w-full mt-18">
           <div className="flex items-center mx-auto gap-6 w-fit">
@@ -49,7 +49,7 @@ export function ThreeLineComponent() {
               helping you bet with strategy, not emotion.
             </div>
             <div className="pb-20 mt-32 space-y-6">
-              <div className="relative z-[1000] flex justify-center gap-4">
+              <div className="relative z-1000 flex justify-center gap-4">
                 <PrimaryButton
                   icon={<ReceiveSquare />}
                   label="Download Now"
@@ -64,7 +64,7 @@ export function ThreeLineComponent() {
                   <PrimaryButton
                     icon={<Logout />}
                     label="Visit Website"
-                    className="!bg-black2 py-4 px-6 text-dark-gray"
+                    className="bg-black2! px-6 text-dark-gray"
                   />
                 </Link>
               </div>

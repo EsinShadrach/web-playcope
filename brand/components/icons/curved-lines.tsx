@@ -1,0 +1,145 @@
+import React from "react";
+
+export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      width="1728"
+      height="428"
+      viewBox="0 0 1728 428"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M-72 0.5C589.355 27.4834 1138.15 28.1605 1799.5 0.5"
+        stroke="url(#paint0_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M-72 58.5C589.355 85.4834 1138.15 86.1605 1799.5 58.5"
+        stroke="url(#paint1_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M1799.5 116.5C1138.15 143.483 589.353 144.16 -72 116.5"
+        stroke="url(#paint2_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M-72 174.5C589.355 201.483 1138.15 202.16 1799.5 174.5"
+        stroke="url(#paint3_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M1800.5 426.992C1139.15 400.009 590.353 399.332 -71 426.992"
+        stroke="url(#paint4_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M1800.5 368.992C1139.15 342.009 590.353 341.332 -71 368.992"
+        stroke="url(#paint5_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M-71 310.992C590.355 284.009 1139.15 283.332 1800.5 310.992"
+        stroke="url(#paint6_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <path
+        d="M1800.5 252.992C1139.15 226.009 590.353 225.332 -71 252.992"
+        stroke="url(#paint7_linear_3556_3715)"
+        strokeLinecap="round"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_3556_3715"
+          x1="-72"
+          y1="10.7461"
+          x2="1799.5"
+          y2="10.7461"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="white" />
+          <stop offset="0.293269" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_3556_3715"
+          x1="-72"
+          y1="68.7461"
+          x2="1799.5"
+          y2="68.7461"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
+          <stop offset="1" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_3556_3715"
+          x1="1799.5"
+          y1="126.746"
+          x2="-72"
+          y2="126.746"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="white" />
+          <stop offset="0.293269" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_3556_3715"
+          x1="-72"
+          y1="184.746"
+          x2="1799.5"
+          y2="184.746"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
+          <stop offset="1" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint4_linear_3556_3715"
+          x1="1800.5"
+          y1="416.746"
+          x2="-71"
+          y2="416.746"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="white" />
+          <stop offset="0.293269" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint5_linear_3556_3715"
+          x1="1800.5"
+          y1="358.746"
+          x2="-71"
+          y2="358.746"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
+          <stop offset="1" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint6_linear_3556_3715"
+          x1="-71"
+          y1="300.746"
+          x2="1800.5"
+          y2="300.746"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="white" />
+          <stop offset="0.293269" stop-color="#1E1E1E" />
+        </linearGradient>
+        <linearGradient
+          id="paint7_linear_3556_3715"
+          x1="1800.5"
+          y1="242.746"
+          x2="-71"
+          y2="242.746"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
+          <stop offset="1" stop-color="#1E1E1E" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}

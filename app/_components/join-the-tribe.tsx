@@ -11,25 +11,23 @@ import Image from "next/image";
 export function JoinTheTribe() {
   return (
     <div className="relative">
-      {false && (
-        <div className="absolute inset-x-0 flex justify-between">
-          <div className="relative z-30">
-            <Oval />
-          </div>
-          <div className="scale-x-[-1] relative z-30">
-            <Oval />
-          </div>
+      <div className="absolute inset-x-0 flex justify-between">
+        <div className="relative z-30">
+          <Oval />
         </div>
-      )}
+        <div className="scale-x-[-1] relative z-30">
+          <Oval />
+        </div>
+      </div>
       <div className="container p-3 mx-auto mt-32 space-y-4">
         <PrimaryButton
           label="Trust The Process"
-          className="!bg-black2 text-dark-gray w-fit mx-auto"
+          className="bg-black2! text-dark-gray w-fit mx-auto"
         />
         <div className="text-center text-white text-5xl font-bold capitalize leading-[74.20px]">
           join the playcope tribe
         </div>
-        <div className="flex gap-2 w-fit mt-10 h-[40rem]">
+        <div className="flex gap-2 w-fit mt-10 h-160">
           <div className="flex flex-col w-full gap-2">
             <div className="w-full h-full">
               <Image alt="update" className="w-full h-full" src={update} />

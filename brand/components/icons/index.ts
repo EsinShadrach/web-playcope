@@ -5,6 +5,7 @@ export * from "./balll-dot-2";
 export * from "./balll-dot-3";
 export * from "./balll-dot-4";
 export * from "./balll-dot-5";
+export * from "./curved-lines";
 export * from "./facebook";
 export * from "./flash";
 export * from "./insta-gradient";

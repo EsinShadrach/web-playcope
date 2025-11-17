@@ -4,21 +4,21 @@ export function WhatIsPlaycope() {
   return (
     <div className="relative">
       <div className="mt-32">
-        <div className="w-full h-px bg-[linear-gradient(to_right,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.2)_25%,_rgba(255,255,255,0.24)_50%,_rgba(13,79,247,0.2)_75%,_rgba(13,79,247,0)_100%)]" />
-        <div className="mt-28 w-full h-px bg-[linear-gradient(to_right,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.3)_25%,_rgba(255,255,255,0.5)_50%,_rgba(13,79,247,0.3)_75%,_rgba(13,79,247,0)_100%)]" />
+        <div className="w-full h-px bg-[linear-gradient(to_right,rgba(13,79,247,0)_0%,rgba(13,79,247,0.2)_25%,rgba(255,255,255,0.24)_50%,rgba(13,79,247,0.2)_75%,rgba(13,79,247,0)_100%)]" />
+        <div className="mt-28 w-full h-px bg-[linear-gradient(to_right,rgba(13,79,247,0)_0%,rgba(13,79,247,0.3)_25%,rgba(255,255,255,0.5)_50%,rgba(13,79,247,0.3)_75%,rgba(13,79,247,0)_100%)]" />
 
         <div className="relative flex h-[800px] justify-between items-center container mx-auto">
-          <div className="size-[800px] absolute left-1/2 right-1/2 -translate-x-1/2 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(255,_255,_255,_0.10)_0%,_rgba(175.31,_197.79,_255,_0)_100%)] rounded-full mx-auto" />
+          <div className="size-[800px] absolute left-1/2 right-1/2 -translate-x-1/2 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,rgba(255,255,255,0.10)_0%,rgba(175.31,197.79,255,0)_100%)] rounded-full mx-auto" />
 
           <div className="flex h-[1020px]">
-            <div className="w-px h-full bg-[linear-gradient(to_bottom,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.15)_25%,_rgba(110,110,110,0.55)_50%,_rgba(13,79,247,0.15)_75%,_rgba(13,79,247,0)_100%)]" />
-            <div className="ml-28 w-px h-full bg-[linear-gradient(to_bottom,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.3)_25%,_rgba(255,255,255,1.0)_50%,_rgba(13,79,247,0.3)_75%,_rgba(13,79,247,0)_100%)]" />
+            <div className="w-px h-full bg-[linear-gradient(to_bottom,rgba(13,79,247,0)_0%,rgba(13,79,247,0.15)_25%,rgba(110,110,110,0.55)_50%,rgba(13,79,247,0.15)_75%,rgba(13,79,247,0)_100%)]" />
+            <div className="ml-28 w-px h-full bg-[linear-gradient(to_bottom,rgba(13,79,247,0)_0%,rgba(13,79,247,0.3)_25%,rgba(255,255,255,1.0)_50%,rgba(13,79,247,0.3)_75%,rgba(13,79,247,0)_100%)]" />
           </div>
 
           <div className="relative z-30 flex flex-col justify-center gap-8">
             <PrimaryButton
               label="About Us"
-              className="!bg-black2 self-center mb-2"
+              className="bg-black2! self-center mb-2"
             />
             <div className="text-5xl font-bold text-center text-white capitalize">
               what is playcope
@@ -26,9 +26,9 @@ export function WhatIsPlaycope() {
             <div className="w-[721px] text-center justify-start">
               <span className="text-lg font-normal capitalize text-dark-gray leading-6">
                 Playcope is a football intelligence company built to help fans,
-                bettors, analysts, and brands see football in a smarter way.  We
-                believe football isn’t just about the final whistle it’s data,
-                emotion, and patterns waiting to be understood.
+                bettors, analysts, and brands see football in a smarter way. We
+                believe football isn&apos;t just about the final whistle it’s
+                data, emotion, and patterns waiting to be understood.
                 <br />
                 At Playcope, we turn complex football data into simple, powerful
                 insights using artificial intelligence. Our mission is to make
@@ -61,14 +61,14 @@ export function WhatIsPlaycope() {
           </div>
 
           <div className="flex h-[1020px]">
-            <div className="mr-28 w-px h-full bg-[linear-gradient(to_bottom,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.3)_25%,_rgba(255,255,255,1.0)_50%,_rgba(13,79,247,0.3)_75%,_rgba(13,79,247,0)_100%)]" />
-            <div className="w-px h-full bg-[linear-gradient(to_bottom,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.15)_25%,_rgba(110,110,110,0.55)_50%,_rgba(13,79,247,0.15)_75%,_rgba(13,79,247,0)_100%)]" />
+            <div className="mr-28 w-px h-full bg-[linear-gradient(to_bottom,rgba(13,79,247,0)_0%,rgba(13,79,247,0.3)_25%,rgba(255,255,255,1.0)_50%,rgba(13,79,247,0.3)_75%,rgba(13,79,247,0)_100%)]" />
+            <div className="w-px h-full bg-[linear-gradient(to_bottom,rgba(13,79,247,0)_0%,rgba(13,79,247,0.15)_25%,rgba(110,110,110,0.55)_50%,rgba(13,79,247,0.15)_75%,rgba(13,79,247,0)_100%)]" />
           </div>
         </div>
-        <div className="mb-28 w-full h-px bg-[linear-gradient(to_right,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.3)_25%,_rgba(255,255,255,0.5)_50%,_rgba(13,79,247,0.3)_75%,_rgba(13,79,247,0)_100%)]" />
-        <div className="w-full h-px bg-[linear-gradient(to_right,_rgba(13,79,247,0)_0%,_rgba(13,79,247,0.2)_25%,_rgba(255,255,255,0.24)_50%,_rgba(13,79,247,0.2)_75%,_rgba(13,79,247,0)_100%)]" />
+        <div className="mb-28 w-full h-px bg-[linear-gradient(to_right,rgba(13,79,247,0)_0%,rgba(13,79,247,0.3)_25%,rgba(255,255,255,0.5)_50%,rgba(13,79,247,0.3)_75%,rgba(13,79,247,0)_100%)]" />
+        <div className="w-full h-px bg-[linear-gradient(to_right,rgba(13,79,247,0)_0%,rgba(13,79,247,0.2)_25%,rgba(255,255,255,0.24)_50%,rgba(13,79,247,0.2)_75%,rgba(13,79,247,0)_100%)]" />
       </div>
-      <div className="size-[1012px] bg-[radial-gradient(ellipse_44.26%_44.26%_at_47.83%_45.85%,_rgba(59,_59,_59,_0.88)_0%,_rgba(30,_30,_30,_0)_100%)] rounded-full absolute -bottom-[85%] left-1/2 right-1/2 -translate-x-1/2" />
+      <div className="size-[1012px] bg-[radial-gradient(ellipse_44.26%_44.26%_at_47.83%_45.85%,rgba(59,59,59,0.88)_0%,rgba(30,30,30,0)_100%)] rounded-full absolute -bottom-[85%] left-1/2 right-1/2 -translate-x-1/2" />
     </div>
   );
 }
