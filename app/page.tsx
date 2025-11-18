@@ -9,20 +9,30 @@ import { ThreeLineComponent } from "./_components/three-line";
 import { WhatIsPlaycope } from "./_components/what-is-playcope";
 import { WhatOurFansThink } from "./_components/what-our-fans-think";
 import { ReadyToJoinTheFun } from "./_components/ready-to-join-the-fun";
+import Footer from "./_components/footer";
 
 export default function Home() {
   return (
-    <main className="mb-140">
+    <main id="top">
       <Spotlight />
       <BoxOfBall />
       <PlaycopeIsABrand />
-      <WhatIsPlaycope />
+      <div id="about-us">
+        <WhatIsPlaycope />
+      </div>
       <PlaycopeVision />
-      <ThreeLineComponent />
+      <div id="our-apps">
+        <ThreeLineComponent />
+      </div>
       <JoinTheTribe />
-      <WhatOurFansThink />
-      <FrequentlyAskedQuestions />
+      <div id="testimonials">
+        <WhatOurFansThink />
+      </div>
+      <div id="faq">
+        <FrequentlyAskedQuestions />
+      </div>
       <ReadyToJoinTheFun />
+      <Footer />
     </main>
   );
 }

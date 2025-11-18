@@ -59,8 +59,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="10.7461"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.293269" stop-color="#1E1E1E" />
+          <stop stopColor="white" />
+          <stop offset="0.293269" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_3556_3715"
@@ -70,8 +70,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="68.7461"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
-          <stop offset="1" stop-color="#1E1E1E" />
+          <stop stopColor="#3B3B3B" stopOpacity="0.62" />
+          <stop offset="1" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_3556_3715"
@@ -81,8 +81,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="126.746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.293269" stop-color="#1E1E1E" />
+          <stop stopColor="white" />
+          <stop offset="0.293269" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_3556_3715"
@@ -92,8 +92,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="184.746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
-          <stop offset="1" stop-color="#1E1E1E" />
+          <stop stopColor="#3B3B3B" stopOpacity="0.62" />
+          <stop offset="1" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_3556_3715"
@@ -103,8 +103,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="416.746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.293269" stop-color="#1E1E1E" />
+          <stop stopColor="white" />
+          <stop offset="0.293269" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_3556_3715"
@@ -114,8 +114,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="358.746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
-          <stop offset="1" stop-color="#1E1E1E" />
+          <stop stopColor="#3B3B3B" stopOpacity="0.62" />
+          <stop offset="1" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_3556_3715"
@@ -125,8 +125,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="300.746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.293269" stop-color="#1E1E1E" />
+          <stop stopColor="white" />
+          <stop offset="0.293269" stopColor="#1E1E1E" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_3556_3715"
@@ -136,8 +136,8 @@ export function CurvedLines(props: React.SVGProps<SVGSVGElement>) {
           y2="242.746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3B3B3B" stop-opacity="0.62" />
-          <stop offset="1" stop-color="#1E1E1E" />
+          <stop stopColor="#3B3B3B" stopOpacity="0.62" />
+          <stop offset="1" stopColor="#1E1E1E" />
         </linearGradient>
       </defs>
     </svg>

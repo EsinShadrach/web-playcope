@@ -27,7 +27,7 @@ export function Oval(props: React.SVGProps<SVGSVGElement>) {
           width="577.6"
           height="1882.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -49,8 +49,8 @@ export function Oval(props: React.SVGProps<SVGSVGElement>) {
           y2="941.3"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#1E1E1E" />
-          <stop offset="1" stop-color="#1E1E1E" stop-opacity="0" />
+          <stop stopColor="#1E1E1E" />
+          <stop offset="1" stopColor="#1E1E1E" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
