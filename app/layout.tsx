@@ -25,6 +25,33 @@ export default function RootLayout({
           <Navbar />
         </header>
         {children}
+        <svg className="absolute pointer-events-none" width="0" height="0">
+          <defs>
+            <filter
+              id="glass-distort"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%"
+            >
+              {/* Very low frequency turbulence creates smooth, large waves for clear lens effect */}
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.06"
+                numOctaves="1"
+                result="turbulence"
+              />
+              {/* Apply smooth displacement to create clear lens refraction - bends straight lines into curves */}
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="turbulence"
+                scale="45"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
+            </filter>
+          </defs>
+        </svg>
       </body>
     </html>
   );
