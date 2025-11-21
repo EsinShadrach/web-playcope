@@ -37,8 +37,8 @@ export default function RootLayout({
               {/* Very low frequency turbulence creates smooth, large waves for clear lens effect */}
               <feTurbulence
                 type="fractalNoise"
-                baseFrequency="0.06"
-                numOctaves="1"
+                baseFrequency="0.02"
+                numOctaves="2"
                 result="turbulence"
               />
               {/* Apply smooth displacement to create clear lens refraction - bends straight lines into curves */}

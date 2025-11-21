@@ -1,4 +1,3 @@
-import { CurvedLines } from "@/brand/components/icons";
 import { BoxOfBall } from "./_components/box-of-ball";
 import { FrequentlyAskedQuestions } from "./_components/frequently-asked-questions";
 import { JoinTheTribe } from "./_components/join-the-tribe";

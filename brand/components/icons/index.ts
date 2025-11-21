@@ -24,3 +24,4 @@ export * from "./verify";
 export * from "./x-gradient";
 export * from "./x_logo";
 export * from "./ellipse";
+export * from "./new-post-rectangle";
