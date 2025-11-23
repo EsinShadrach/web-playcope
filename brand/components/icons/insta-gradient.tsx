@@ -25,8 +25,8 @@ export function InstaGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="23.9999"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#3B3B3B" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#3B3B3B" />
         </linearGradient>
         <clipPath id="clip0_3460_3874">
           <rect width="24" height="24" fill="white" />

@@ -14,15 +14,13 @@ export default function Home() {
   return (
     <main id="top">
       <Spotlight />
-      <BoxOfBall />
+      {/* <BoxOfBall /> */}
       <PlaycopeIsABrand />
       <div id="about-us">
         <WhatIsPlaycope />
       </div>
       <PlaycopeVision />
-      <div id="our-apps">
-        <ThreeLineComponent />
-      </div>
+      <div id="our-apps">{/* <ThreeLineComponent /> */}</div>
       <JoinTheTribe />
       <div id="testimonials">
         <WhatOurFansThink />

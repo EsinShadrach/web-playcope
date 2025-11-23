@@ -18,7 +18,7 @@ export default function NewPostRectangle(props: React.SVGProps<SVGSVGElement>) {
         rx="25"
         fill="url(#paint0_linear_3437_5680)"
         stroke="url(#paint1_linear_3437_5680)"
-        stroke-width="10"
+        strokeWidth="10"
       />
       <defs>
         <linearGradient
@@ -29,8 +29,8 @@ export default function NewPostRectangle(props: React.SVGProps<SVGSVGElement>) {
           y2="165"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0C0C0C" stop-opacity="0" />
-          <stop offset="1" stop-color="#1E1E1E" stop-opacity="0.23" />
+          <stop stopColor="#0C0C0C" stopOpacity="0" />
+          <stop offset="1" stopColor="#1E1E1E" stopOpacity="0.23" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_3437_5680"
@@ -40,8 +40,8 @@ export default function NewPostRectangle(props: React.SVGProps<SVGSVGElement>) {
           y2="165"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-opacity="0" />
-          <stop offset="1" stop-color="#3B3B3B" stop-opacity="0.22" />
+          <stop stopOpacity="0" />
+          <stop offset="1" stopColor="#3B3B3B" stopOpacity="0.22" />
         </linearGradient>
       </defs>
     </svg>

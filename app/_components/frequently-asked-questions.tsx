@@ -3,12 +3,12 @@ import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 
 export function FrequentlyAskedQuestions() {
   return (
-    <div className="container mx-auto p-3 m-20 space-y-4">
+    <div className="container mx-auto p-3 md:m-20 space-y-4">
       <PrimaryButton
         label="FAQs"
-        className="bg-black2! text-dark-gray w-fit mx-auto"
+        className="bg-black2! text-dark-gray w-fit mx-auto max-md:text-sm"
       />
-      <div className="text-center text-white text-5xl font-bold capitalize leading-[74.20px] mb-16">
+      <div className="text-center text-white text-2xl md:text-5xl font-bold capitalize leading-6 md:leading-[74.20px] mb-16">
         Everything You Need To Know
       </div>
       <div className="mx-auto max-w-5xl space-y-4">
@@ -44,7 +44,7 @@ export default function FaqTile({
   return (
     <div className="w-full">
       <div
-        className={`py-7 px-12 w-full border border-black2 rounded-[50px] capitalize transition-colors cursor-pointer`}
+        className={`py-5 md:py-7 px-6 md:px-12 w-full border border-black2 rounded-[50px] capitalize transition-colors cursor-pointer`}
         style={{
           background: open
             ? "radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(12,12,12,1) 100%)"
@@ -62,12 +62,12 @@ export default function FaqTile({
         }}
       >
         <div className="w-full focus:outline-none flex items-center justify-between bg-transparent pointer-events-none">
-          <div className="font-bold text-xl text-left pointer-events-none">
+          <div className="font-bold md:text-xl text-left pointer-events-none">
             {title}
           </div>
           <div className="flex items-center ml-6 pointer-events-none">
             <div
-              className={`bg-foreground h-8 w-0.5 transition-transform duration-300 box-border rounded`}
+              className={`bg-foreground h-6 md:h-8 w-0.5 transition-transform duration-300 box-border rounded`}
               style={{
                 transform: open ? "rotate(90deg)" : "rotate(0deg)",
               }}
@@ -87,7 +87,7 @@ export default function FaqTile({
               : "0",
           }}
         >
-          <div className="text-dark-gray text-base">{subtitle}</div>
+          <div className="text-dark-gray text-sm md:text-base">{subtitle}</div>
         </div>
       </div>
     </div>

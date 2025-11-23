@@ -44,7 +44,7 @@ for (const file of files) {
   const fileBaseName = toKebabCase(file);
   const formattedSvg = cleaned
     .replace("<svg", "<svg {...props}")
-    // convert dashed attributes (stroke-width → strokeWidth)
+    // convert dashed attributes (strokeWidth → strokeWidth)
     .replace(/([a-zA-Z-]+)="(.*?)"/g, (match, attr: string, val) =>
       attr.includes("-")
         ? `${attr.replace(/-([a-z])/g, (_, c: string) => c.toUpperCase())}="${val}"`

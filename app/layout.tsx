@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spacGrotesk.variable} antialiased font-sans`}>
-        <header className="container sticky z-50 p-3 mx-auto top-5">
+        <header className="container sticky z-50 md:p-3 px-3 mx-auto top-5">
           <Navbar />
         </header>
         {children}

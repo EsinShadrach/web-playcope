@@ -25,8 +25,8 @@ export function XGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="24"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#3B3B3B" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#3B3B3B" />
         </linearGradient>
         <clipPath id="clip0_3460_3878">
           <rect width="27" height="24" fill="white" />

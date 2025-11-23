@@ -49,8 +49,8 @@ export function TikTokGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="4.60952"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FE2C55" />
-          <stop offset="1" stop-color="#3B3B3B" />
+          <stop stopColor="#FE2C55" />
+          <stop offset="1" stopColor="#3B3B3B" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_3460_3862"
@@ -60,8 +60,8 @@ export function TikTokGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="18.6614"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FE2C55" />
-          <stop offset="1" stop-color="#3B3B3B" />
+          <stop stopColor="#FE2C55" />
+          <stop offset="1" stopColor="#3B3B3B" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_3460_3862"
@@ -71,8 +71,8 @@ export function TikTokGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="23.9999"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FE2C55" />
-          <stop offset="1" stop-color="#3B3B3B" />
+          <stop stopColor="#FE2C55" />
+          <stop offset="1" stopColor="#3B3B3B" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_3460_3862"
@@ -82,8 +82,8 @@ export function TikTokGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="22.9965"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#3B3B3B" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#3B3B3B" />
         </linearGradient>
         <clipPath id="clip0_3460_3862">
           <rect width="21" height="24" fill="white" />

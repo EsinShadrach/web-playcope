@@ -23,8 +23,8 @@ export function PlaycopeGradient(props: React.SVGProps<SVGSVGElement>) {
           y2="30"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#1E1E1E" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#1E1E1E" />
         </linearGradient>
       </defs>
     </svg>
