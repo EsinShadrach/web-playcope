@@ -40,14 +40,14 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <p className="text-[22svw] font-bold leading-[1.15] text-center">
+        <p className="text-[20svw] font-bold leading-[1.15] text-center">
           Playcope
         </p>
-        <div className="bg-white flex justify-between items-center text-primary px-12 py-6 *:max-md:text-sm *:whitespace-nowrap *:text-ellipsis gap-6">
+        <div className="bg-white flex justify-between items-center text-primary px-6 md:px-12 py-6 *:max-md:text-xs *:whitespace-nowrap *:text-ellipsis gap-6 mt-1.5">
           <p>Copyright {new Date().getFullYear()}</p>
           <div className="space-x-2 md:space-x-10">
             <span>Terms & Condition</span>
-            <span>Privacy Policy</span>
+            <span className="">Privacy Policy</span>
           </div>
         </div>
 

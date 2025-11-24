@@ -13,10 +13,10 @@ export function PlaycopeIsABrand() {
         Our products combine cutting-edge AI with football intuition <br />
         to help you understand, predict, and enjoy the game on a whole new level
       </div>
-      <div className="mx-auto mt-15 w-fit">
+      <div className="mx-auto mt-10 md:mt-15 w-full md:w-fit">
         <FoundedWhen />
       </div>
-      <div className="flex justify-center mt-10 md:mt-24 gap-4 flex-col">
+      <div className="flex justify-center mt-10 md:mt-24 gap-4 md:flex-row flex-col">
         <PrimaryButton
           icon={<Verify />}
           label="Become A Member"

@@ -8,7 +8,7 @@ export function NavbarLogo({ hideText }: { hideText: boolean }) {
       }}
       aria-label="Go to top"
       className={
-        "relative flex items-center text-xl font-bold gap-3 cursor-pointer min-h-12 min-w-12"
+        "relative flex items-center text-xl font-bold md:gap-3 cursor-pointer min-h-12 min-w-12"
       }
       style={{ minHeight: "48px" }}
     >
@@ -19,7 +19,7 @@ export function NavbarLogo({ hideText }: { hideText: boolean }) {
             ${
               hideText
                 ? "bg-primary w-12 h-12 rounded-full shadow-md"
-                : "bg-transparent w-9 h-9 rounded-none"
+                : "bg-transparent size-9 rounded-none"
             }
           `}
         style={{

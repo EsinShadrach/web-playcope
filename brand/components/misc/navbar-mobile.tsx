@@ -25,16 +25,16 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
           borderRadius: isOpened ? "10px 10px 0px 0px" : "",
         }}
       >
-        <div className="flex w-full gap-2 relative z-10">
+        <div className="flex w-full gap-2 relative z-10 items-center">
           <div className="w-fit">
             <NavbarLogo hideText={hideText} />
           </div>
           <div className="w-full" />
-          <button className="bg-light-black rounded-full size-12 p-3">
-            <InstaLogo />
+          <button className="bg-light-black rounded-full size-10 p-3">
+            <InstaLogo className="size-4" />
           </button>
-          <button className="bg-light-black rounded-full size-12 p-3">
-            <XLogo />
+          <button className="bg-light-black rounded-full size-10 p-3">
+            <XLogo className="size-4" />
           </button>
           <button onClick={toggle} className="rounded-full size-12 px-3">
             <svg

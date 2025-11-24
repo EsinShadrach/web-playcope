@@ -62,7 +62,7 @@ export function NavTabs({ onTabClick }: { onTabClick?: () => void }) {
     if (!container) return;
 
     const activeButton = Array.from(container.children).find((child) =>
-      (child as HTMLElement).textContent?.includes(activeTab),
+      (child as HTMLElement).textContent?.includes(activeTab)
     ) as HTMLElement | undefined;
 
     if (activeButton) {
