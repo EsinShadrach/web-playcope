@@ -27,3 +27,21 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+@keyframes marquee-forward {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes marquee-backward {
+  from {
+    offset-distance: 100%;
+  }
+  to {
+    offset-distance: 0%;
+  }
+}

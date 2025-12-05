@@ -123,11 +123,12 @@ export function HomeHero() {
         <div className="top-banner">
           {leagues.map((league, index) => (
             <div
-              key={league.name}
+              key={`${league.name}-top-${index}`}
               className="absolute flex items-center gap-3 -top-8"
               style={{
                 offsetPath: TOP_PATH,
-                offsetDistance: `${15 + (index / (leagues.length - 1)) * 70}%`,
+                animation: `marquee-backward 30s linear infinite`,
+                animationDelay: `-${(index / leagues.length) * 30}s`,
                 offsetRotate: "auto",
               }}
             >
@@ -155,11 +156,12 @@ export function HomeHero() {
         <div className="bottom">
           {leagues.map((league, index) => (
             <div
-              key={league.name + "bottom"}
+              key={`${league.name}-bottom-${index}`}
               className="absolute flex items-center gap-3 top-4"
               style={{
                 offsetPath: BOTTOM_PATH,
-                offsetDistance: `${15 + (index / (leagues.length - 1)) * 70}%`,
+                animation: `marquee-forward 30s linear infinite`,
+                animationDelay: `-${(index / leagues.length) * 30}s`,
                 offsetRotate: "auto",
               }}
             >
