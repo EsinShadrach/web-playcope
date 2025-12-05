@@ -13,7 +13,7 @@ export function XLogo(props: React.SVGProps<SVGSVGElement>) {
       <g clipPath="url(#clip0_3456_3792)">
         <path
           d="M21.253 0H25.3735L16.3735 10.1867L27 24H18.6506L12.1446 15.6267L4.66265 24H0.542169L10.1928 13.12L0 0H8.56627L14.4759 7.68L21.253 0ZM19.7892 21.5467H22.0663L7.31928 2.29333H4.8253L19.7892 21.5467Z"
-          fill="white"
+          fill="currentColor"
         />
       </g>
       <defs>

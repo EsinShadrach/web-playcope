@@ -32,13 +32,14 @@ export default function Navbar() {
 
         {/* Right: Buttons */}
         <div className="flex items-center ml-auto gap-4">
-          <IconButton>
-            <InstaLogo className="size-5" />
-          </IconButton>
-          <IconButton>
-            <XLogo className="size-5" />
-          </IconButton>
-          <PrimaryButton icon={<Verify />} label="Become A Member" />
+          <button className="text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
+            <InstaLogo className="text-foreground size-6 fill-foreground" />
+          </button>
+          <PrimaryButton
+            icon={<Verify />}
+            label="Become A Member"
+            className="text-background"
+          />
         </div>
       </nav>
       <NavBarMobile hideText={hideText} />
@@ -50,7 +51,7 @@ export function NavTabs({ onTabClick }: { onTabClick?: () => void }) {
   const tabs = [
     { text: "Home", link: "#top" },
     { text: "Our Apps", link: "#our-apps" },
-    { text: "About Us", link: "about-us" },
+    { text: "About Us", link: "#about-us" },
   ];
   const [activeTab, setActiveTab] = useState("Home");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -75,12 +76,12 @@ export function NavTabs({ onTabClick }: { onTabClick?: () => void }) {
 
   return (
     <div
-      className="relative flex items-center p-2 rounded-full bg-black2/50 backdrop-blur-md gap-2"
+      className="relative flex items-center p-2 rounded-full bg-light-grey backdrop-blur-md gap-2"
       ref={containerRef}
     >
       {/* Sliding background indicator */}
       <div
-        className="absolute top-0 bottom-0 my-1.5 rounded-full bg-light-black transition-all duration-300 ease-in-out"
+        className="absolute top-0 bottom-0 my-1.5 rounded-full bg-grey-1 transition-all duration-300 ease-in-out"
         style={{
           left: indicatorStyle.left,
           width: indicatorStyle.width,
@@ -91,8 +92,8 @@ export function NavTabs({ onTabClick }: { onTabClick?: () => void }) {
       {tabs.map((tab) => (
         <button
           key={tab.text}
-          className={`relative flex items-center justify-center px-4 py-2 text-base font-medium transition-colors z-10 ${
-            activeTab === tab.text ? "text-white" : "text-gray-400"
+          className={`relative flex items-center justify-center px-4 py-2 text-base font-medium transition-colors z-10 rounded-full ${
+            activeTab === tab.text ? "text-primary" : "text-gray-400"
           }`}
           onClick={(e) => {
             setActiveTab(tab.text);

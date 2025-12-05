@@ -1,35 +1,26 @@
-import { BoxOfBall } from "./_components/box-of-ball";
-import { FrequentlyAskedQuestions } from "./_components/frequently-asked-questions";
-import { JoinTheTribe } from "./_components/join-the-tribe";
-import { PlaycopeIsABrand } from "./_components/playcope-is-a-brand";
-import { PlaycopeVision } from "./_components/playcope-vision";
-import { Spotlight } from "./_components/spotlights";
-import { ThreeLineComponent } from "./_components/three-line";
-import { WhatIsPlaycope } from "./_components/what-is-playcope";
-import { WhatOurFansThink } from "./_components/what-our-fans-think";
-import { ReadyToJoinTheFun } from "./_components/ready-to-join-the-fun";
-import Footer from "./_components/footer";
+import { HomeHero } from "./_components/home-hero";
 
 export default function Home() {
   return (
-    <main id="top">
-      <Spotlight />
-      {/* <BoxOfBall /> */}
-      <PlaycopeIsABrand />
-      <div id="about-us">
-        <WhatIsPlaycope />
-      </div>
-      <PlaycopeVision />
-      <div id="our-apps">{/* <ThreeLineComponent /> */}</div>
-      <JoinTheTribe />
-      <div id="testimonials">
-        <WhatOurFansThink />
-      </div>
-      <div id="faq">
-        <FrequentlyAskedQuestions />
-      </div>
-      <ReadyToJoinTheFun />
-      <Footer />
+    <main className="flex flex-col w-full">
+      {/* Hero Section / Top */}
+      <HomeHero />
+
+      {/* Our Apps Section */}
+      {/* <section
+        id="our-apps"
+        className="min-h-screen flex items-center justify-center bg-blue-50 mt-20"
+      >
+        <h2 className="text-3xl font-bold">Our Apps</h2>
+      </section>
+
+      {/* About Us Section */}
+      {/* <section
+        id="about-us"
+        className="min-h-screen flex items-center justify-center bg-green-50"
+      >
+        <h2 className="text-3xl font-bold">About Us</h2>
+      </section>  */}
     </main>
   );
 }
