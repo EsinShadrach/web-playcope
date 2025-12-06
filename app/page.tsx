@@ -1,4 +1,7 @@
 import { HomeHero } from "./_components/home-hero";
+import { OurApps } from "./_components/our-apps";
+
+import { PlaycopeVision } from "./_components/playcope-vision";
 
 export default function Home() {
   return (
@@ -7,13 +10,10 @@ export default function Home() {
       <HomeHero />
 
       {/* Our Apps Section */}
-      {/* <section
-        id="our-apps"
-        className="min-h-screen flex items-center justify-center bg-blue-50 mt-20"
-      >
-        <h2 className="text-3xl font-bold">Our Apps</h2>
-      </section>
+      <OurApps />
 
+      {/* Playcope Vision Section */}
+      <PlaycopeVision />
       {/* About Us Section */}
       {/* <section
         id="about-us"

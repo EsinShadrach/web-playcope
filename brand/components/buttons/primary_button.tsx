@@ -16,7 +16,7 @@ export function PrimaryButton({
 }: PrimaryButtonProps) {
   return (
     <button
-      className={`flex items-center justify-center px-6 py-3 text-lg font-normal rounded-full bg-primary gap-2 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed transition-colors ${className} leading-6`}
+      className={`flex items-center justify-center px-6 py-3 text-lg font-normal rounded-full bg-primary gap-2 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed transition-colors ${className} leading-6 cursor-pointer`}
       {...props}
       disabled={props.disabled || loading}
     >
