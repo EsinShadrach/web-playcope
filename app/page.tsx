@@ -1,6 +1,6 @@
 import { HomeHero } from "./_components/home-hero";
 import { OurApps } from "./_components/our-apps";
-
+import { Testimonials } from "./_components/testimonials";
 import { PlaycopeVision } from "./_components/playcope-vision";
 
 export default function Home() {
@@ -14,6 +14,10 @@ export default function Home() {
 
       {/* Playcope Vision Section */}
       <PlaycopeVision />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
       {/* About Us Section */}
       {/* <section
         id="about-us"
