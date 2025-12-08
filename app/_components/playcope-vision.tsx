@@ -4,7 +4,13 @@ import Image from "next/image";
 import React from "react";
 
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
-import { Facebook, Logo, Tiktok, XLogo } from "@/brand/components/icons";
+import {
+  Facebook,
+  Logo,
+  Tiktok,
+  XLogo,
+  InstaLogo,
+} from "@/brand/components/icons";
 
 export function PlaycopeVision() {
   return (
@@ -109,7 +115,11 @@ export function PlaycopeVision() {
   );
 }
 
-function SocialMediasStack() {
+export function SocialMediasStack({
+  addInstagram,
+}: {
+  addInstagram?: boolean;
+}) {
   return (
     <div className="flex items-center social-medias z-10">
       <div className="size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
@@ -121,6 +131,11 @@ function SocialMediasStack() {
       <div className="-translate-x-8 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
         <Facebook />
       </div>
+      {addInstagram && (
+        <div className="-translate-x-12 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
+          <InstaLogo />
+        </div>
+      )}
     </div>
   );
 }
