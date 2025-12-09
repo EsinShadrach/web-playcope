@@ -13,9 +13,9 @@ export default function Home() {
 
       <OurApps />
 
-      {/* <PlaycopeVision />
+      {/* <PlaycopeVision /> */}
 
-      <Testimonials />
+      {/* <Testimonials />
 
       <AboutUs />
 
