@@ -9,26 +9,19 @@ import { Testimonials } from "./_components/testimonials";
 export default function Home() {
   return (
     <main className="flex flex-col w-full">
-      {/* Hero Section / Top */}
       <HomeHero />
 
-      {/* Our Apps Section */}
       <OurApps />
 
-      {/* Playcope Vision Section */}
-      <PlaycopeVision />
+      {/* <PlaycopeVision />
 
-      {/* Testimonials Section */}
       <Testimonials />
 
-      {/* About Us Section */}
       <AboutUs />
 
-      {/* FAQs Section */}
       <FAQs />
 
-      {/* Intelligence Starts Here Section */}
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }
