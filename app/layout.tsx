@@ -26,7 +26,7 @@ export default function RootLayout({
         <header className="container sticky z-50 md:p-3 px-3 mx-auto top-5">
           <Navbar />
         </header>
-        {children}
+        {/* {children} */}
       </body>
     </html>
   );
