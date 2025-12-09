@@ -17,14 +17,14 @@ export function PlaycopeVision() {
     <section id="playcope-vision" className="min-h-screen">
       <div className="container mx-auto p-3">
         <div className="px-6 py-3 bg-light-grey rounded-3xl w-fit mx-auto">
-          <div className="text-light-black text-lg font-normal capitalize">
+          <div className="text-light-black text-sm md:text-lg font-normal capitalize">
             what we want to achieve
           </div>
         </div>
-        <div className="text-light-black text-7xl font-normal capitalize mx-auto w-fit my-4">
+        <div className="text-light-black text-4xl md:text-7xl font-normal capitalize mx-auto w-fit my-4">
           playcope&apos;s vision
         </div>
-        <div className="flex mt-10 gap-6 justify-center">
+        <div className="flex mt-10 gap-6 justify-center md:flex-row flex-col">
           <_Card
             src={"/new/wave.png"}
             index={1}
@@ -101,14 +101,16 @@ export function PlaycopeVision() {
             </div>
           </_Card>
         </div>
-        <div className="max-w-195 text-center justify-start text-dark-grey text-lg font-normal capitalize mx-auto mt-10">
+        <div className="max-w-195 text-center justify-start text-dark-grey text-base md:text-lg font-normal capitalize mx-auto mt-10">
           To redefine how the world understands football turning raw data into
           intelligent insights that make every fan smarter and every moment more
           meaningful.
         </div>
         <div className="w-fit mx-auto mt-5 flex items-center">
           <SocialMediasStack />
-          <PrimaryButton label="Follow Us" className="text-background!" />
+          <div className="-translate-x-4">
+            <PrimaryButton label="Follow Us" className="text-background!" />
+          </div>
         </div>
       </div>
     </section>
@@ -179,16 +181,16 @@ function _Card({
                 "linear-gradient(to right, #F8F8F866 0%, #A1A1A1 51%, #F8F8F866 100%)",
             }}
           >
-            <div className="text-grey-1 text-4xl font-bold capitalize w-fit h-fit z-50 relative">
+            <div className="text-grey-1 md:text-4xl text-3xl font-bold capitalize w-fit h-fit z-50 relative">
               {index}
             </div>
           </div>
         </div>
         <div className="w-full grow flex flex-col justify-between rounded-b-4xl py-6 gap-6">
-          <div className="text-5xl text-center font-normal capitalize">
+          <div className="md:text-5xl text-4xl text-center font-normal capitalize">
             {title}
           </div>
-          <div className="h-full card-image flex justify-center items-center relative">
+          <div className="h-full card-image flex justify-center items-center relative my-4">
             {hasGradient && (
               <div
                 className="absolute inset-0 blur-xl -z-10"
