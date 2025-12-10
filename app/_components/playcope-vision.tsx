@@ -41,7 +41,10 @@ const cardVariant = {
 
 export function PlaycopeVision() {
   return (
-    <section id="playcope-vision" className="min-h-screen overflow-hidden">
+    <section
+      id="playcope-vision"
+      className="min-h-screen overflow-hidden max-md:mt-20"
+    >
       <motion.div
         initial="hidden"
         whileInView="visible"
