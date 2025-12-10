@@ -17,6 +17,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://playcope.com"),
   title: "Playcope | Football Intelligence Starts Here",
   description:
     "Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way. Powered by AI and real match data.",
@@ -39,24 +40,8 @@ export const metadata: Metadata = {
       "Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way. Powered by AI and real match data.",
     url: "https://playcope.com",
     siteName: "Playcope",
-    images: [
-      {
-        url: "/opengraph.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Playcope Football Intelligence",
-      },
-    ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Playcope | Football Intelligence Starts Here",
-    description:
-      "Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way.",
-    creator: "@playcope",
-    images: ["/opengraph.jpg"],
   },
   robots: {
     index: true,
