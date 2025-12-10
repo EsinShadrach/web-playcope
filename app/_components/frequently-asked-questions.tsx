@@ -10,7 +10,7 @@ export function FAQs() {
             FAQs
           </span>
         </div>
-        <div className="text-center text-light-black text-4xl md:text-7xl font-normal capitalize mt-10 leading-12">
+        <div className="text-center text-light-black text-4xl md:text-7xl font-normal capitalize mt-10 max-md:leading-12 leading-20">
           Everything You Need <br className="max-md:hidden" />
           To Know
         </div>

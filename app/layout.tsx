@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/brand/components/misc/navbar";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import SmoothScrolling from "./_components/smooth-scrolling";
 
 const spacGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -23,10 +24,12 @@ export default function RootLayout({
       <body
         className={`${spacGrotesk.variable} antialiased font-sans overflow-x-hidden`}
       >
-        <header className="container sticky z-50 md:p-3 px-3 mx-auto top-5">
-          <Navbar />
-        </header>
-        {children}
+        <SmoothScrolling>
+          <header className="container sticky z-50 md:p-3 px-3 mx-auto top-5">
+            <Navbar />
+          </header>
+          {children}
+        </SmoothScrolling>
       </body>
     </html>
   );
