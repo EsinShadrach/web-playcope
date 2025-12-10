@@ -1,14 +1,62 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const slideInLeft = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const scaleUp = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      damping: 15,
+      stiffness: 100,
+      delay: 0.3,
+    },
+  },
+};
+
 export function AboutUs() {
   return (
     <section id="about-us" className="min-h-screen">
       <div className="container mx-auto p-3">
-        <div className="px-6 py-2 bg-light-grey rounded-full w-fit mx-auto">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-20%" }}
+          className="px-6 py-2 bg-light-grey rounded-full w-fit mx-auto"
+          variants={fadeInUp}
+        >
           <span className="text-sm md:text-lg text-light-black font-normal uppercase tracking-wide">
             About Us
           </span>
-        </div>
+        </motion.div>
         <div className="flex gap-4 mt-10 max-w-300 mx-auto relative md:flex-row flex-col">
-          <div className="relative border border-grey-1 rounded-4xl p-8 w-full max-w-2xl space-y-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-20%" }}
+            variants={slideInLeft}
+            className="relative border border-grey-1 rounded-4xl p-8 w-full max-w-2xl space-y-4"
+          >
             <div className="text-light-black md:text-5xl text-4xl font-normal capitalize">
               what is playcope..?
             </div>
@@ -32,21 +80,54 @@ export function AboutUs() {
             </div>
 
             {/* Badge */}
-            <div className="year-badge absolute z-10 text-primary left-1/2 -translate-x-1/2 bottom-0 translate-y-[calc(50%+8px)] md:left-auto md:top-auto md:translate-y-0 md:right-0 md:translate-x-[calc(50%+8px)]">
-              <StarThree />
+            <motion.div
+              variants={scaleUp}
+              className="year-badge absolute z-10 text-primary left-1/2 -translate-x-1/2 bottom-0 translate-y-[calc(50%+8px)] md:left-auto md:top-auto md:translate-y-0 md:right-0 md:translate-x-[calc(50%+8px)]"
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              >
+                <StarThree />
+              </motion.div>
               <div className="absolute inset-0 flex justify-center items-center text-background font-bold">
                 2024
               </div>
-            </div>
-          </div>
-          <div className="max-w-lg w-full border border-grey-1 rounded-4xl bg-linear-to-br from-primary/5 to-white/25 overflow-clip relative max-md:h-96">
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-20%" }}
+            variants={fadeInUp}
+            transition={{ delay: 0.2 }}
+            className="max-w-lg w-full border border-grey-1 rounded-4xl bg-linear-to-br from-primary/5 to-white/25 overflow-clip relative max-md:h-96"
+          >
             <div className="absolute -z-10 -bottom-20 -right-30">
               <div className="w-[455px] h-[455px] bg-linear-to-b from-stone-50 to-white rounded-full outline-2 outline-light-grey flex justify-center items-center">
-                <div className="w-80 h-80 bg-[#E9E9E93B] rounded-full outline-2 outline-light-grey flex justify-center items-center">
-                  <div className="w-48 h-48 bg-[#E9E9E94D] rounded-full outline-2 outline-light-grey flex justify-center items-center">
+                <motion.div
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="w-80 h-80 bg-[#E9E9E93B] rounded-full outline-2 outline-light-grey flex justify-center items-center"
+                >
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.2,
+                    }}
+                    className="w-48 h-48 bg-[#E9E9E94D] rounded-full outline-2 outline-light-grey flex justify-center items-center"
+                  >
                     <div className="size-24 bg-grey-1 rounded-full outline-2 outline-light-grey" />
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
 
@@ -55,15 +136,20 @@ export function AboutUs() {
                 we get up to
               </div>
               <div className="space-y-6">
-                <div className="text-center justify-start text-primary text-5xl md:text-7xl font-bold capitalize">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ type: "spring", stiffness: 200, delay: 0.4 }}
+                  className="text-center justify-start text-primary text-5xl md:text-7xl font-bold capitalize"
+                >
                   10M+
-                </div>
+                </motion.div>
                 <div className="text-center justify-start text-dark-grey text-2xl md:text-3xl font-normal capitalize">
                   monthly impressions
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
