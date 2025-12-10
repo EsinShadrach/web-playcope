@@ -15,13 +15,13 @@ export default function Home() {
 
       <PlaycopeVision />
 
-      {/* <Testimonials /> */}
+      <Testimonials />
 
-      {/* <AboutUs />
+      {/* <AboutUs /> */}
 
-      <FAQs />
+      {/* <FAQs /> */}
 
-      <Footer /> */}
+      {/* <Footer /> */}
     </main>
   );
 }

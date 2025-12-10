@@ -57,15 +57,15 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
 export function Testimonials() {
   return (
     <section className="py-24 bg-background overflow-hidden h-screen max-h-[900px]">
-      <div className="container mx-auto px-4 h-full flex flex-col">
+      <div className="container mx-auto px-2 md:px-4 h-full flex flex-col">
         {/* Header */}
-        <div className="flex flex-col items-center mb-16 space-y-4 shrink-0">
+        <div className="flex flex-col items-center mb-16 space-y-4 shrink-0 px-2">
           <div className="px-6 py-2 bg-light-grey rounded-full">
-            <span className="text-sm text-light-black font-normal uppercase tracking-wide">
+            <span className="text-sm md:text-lg text-light-black font-normal uppercase tracking-wide">
               Testimonials
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl text-center text-light-black font-normal capitalize">
+          <h2 className="text-4xl md:text-6xl text-center text-light-black font-normal capitalize">
             What Our Fans Think
           </h2>
         </div>
@@ -124,7 +124,7 @@ function TestimonialCard({
 }) {
   return (
     <div
-      className={`flex flex-col justify-between p-8 bg-light-grey rounded-3xl w-full shrink-0 ${className} space-y-4`}
+      className={`flex flex-col justify-between p-5 md:p-8 bg-light-grey rounded-3xl w-full shrink-0 ${className} space-y-4`}
     >
       <div className="flex items-center gap-4">
         <div className="relative size-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
