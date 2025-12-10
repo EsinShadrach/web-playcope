@@ -56,7 +56,10 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-background overflow-hidden h-screen max-h-[900px]">
+    <section
+      id="testimonials"
+      className="py-24 bg-background overflow-hidden h-screen max-h-[900px]"
+    >
       <div className="container mx-auto px-2 md:px-4 h-full flex flex-col">
         {/* Header */}
         <div className="flex flex-col items-center mb-16 space-y-4 shrink-0 px-2">

@@ -91,13 +91,13 @@ export function Footer() {
         </div>
         <div className="flex gap-12 md:gap-10 text-light-black text-lg font-bold capitalize mt-5">
           <div>
-            <div>Home</div>
-            <div>Our Apps</div>
-            <div>About Us</div>
+            <FooterLink id="top">Home</FooterLink>
+            <FooterLink id="our-apps">Our Apps</FooterLink>
+            <FooterLink id="about-us">About Us</FooterLink>
           </div>
           <div>
-            <div>Testimonials</div>
-            <div>FAQs</div>
+            <FooterLink id="testimonials">Testimonials</FooterLink>
+            <FooterLink id="faq">FAQs</FooterLink>
           </div>
           <div className="ml-10 md:block hidden">
             <div className="flex flex-col items-end gap-4">
@@ -129,6 +129,29 @@ export function Footer() {
           <div>Privacy Policy</div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function FooterLink({
+  children,
+  id,
+}: {
+  children: React.ReactNode;
+  id: string;
+}) {
+  return (
+    <div
+      onClick={() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const y = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }}
+      className="cursor-pointer hover:text-primary transition-colors mb-1"
+    >
+      {children}
     </div>
   );
 }
