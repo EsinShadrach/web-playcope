@@ -61,7 +61,7 @@ export function OurApps() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-20%" }}
           className="space-y-8"
         >
           <motion.div
@@ -94,7 +94,7 @@ export function OurApps() {
           style={{ perspective: "1000px" }}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-20%" }}
         >
           <motion.div
             variants={cardVariant}

@@ -1,7 +1,10 @@
+"use client";
+
 import tribalPattern from "@/public/new/tribal-patterns.png";
 import visionBg from "@/public/new/vision-bg.png";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 import {
@@ -12,18 +15,54 @@ import {
   InstaLogo,
 } from "@/brand/components/icons";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, damping: 20, stiffness: 100 },
+  },
+};
+
 export function PlaycopeVision() {
   return (
-    <section id="playcope-vision" className="min-h-screen">
-      <div className="container mx-auto p-3">
-        <div className="px-6 py-3 bg-light-grey rounded-3xl w-fit mx-auto">
+    <section id="playcope-vision" className="min-h-screen overflow-hidden">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-20%" }}
+        variants={staggerContainer}
+        className="container mx-auto p-3"
+      >
+        <motion.div
+          variants={fadeInUp}
+          className="px-6 py-3 bg-light-grey rounded-3xl w-fit mx-auto"
+        >
           <div className="text-light-black text-sm md:text-lg font-normal capitalize">
             what we want to achieve
           </div>
-        </div>
-        <div className="text-light-black text-4xl md:text-7xl font-normal capitalize mx-auto w-fit my-4">
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="text-light-black text-4xl md:text-7xl font-normal capitalize mx-auto w-fit my-4"
+        >
           playcope&apos;s vision
-        </div>
+        </motion.div>
         <div className="flex mt-10 gap-6 justify-center md:flex-row flex-col">
           <_Card
             src={"/new/wave.png"}
@@ -101,18 +140,28 @@ export function PlaycopeVision() {
             </div>
           </_Card>
         </div>
-        <div className="max-w-195 text-center justify-start text-dark-grey text-base md:text-lg font-normal capitalize mx-auto mt-10">
+        <motion.div
+          variants={fadeInUp}
+          className="max-w-195 text-center justify-start text-dark-grey text-base md:text-lg font-normal capitalize mx-auto mt-10"
+        >
           To redefine how the world understands football turning raw data into
           intelligent insights that make every fan smarter and every moment more
           meaningful.
-        </div>
-        <div className="w-fit mx-auto mt-5 flex items-center">
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="w-fit mx-auto mt-5 flex items-center"
+        >
           <SocialMediasStack />
-          <div className="-translate-x-4">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="-translate-x-4"
+          >
             <PrimaryButton label="Follow Us" className="text-background!" />
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
@@ -122,23 +171,65 @@ export function SocialMediasStack({
 }: {
   addInstagram?: boolean;
 }) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      transition: { type: "spring" as const, stiffness: 200, damping: 20 },
+    },
+  };
+
   return (
-    <div className="flex items-center social-medias z-10">
-      <div className="size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ margin: "-20%" }}
+      className="flex items-center social-medias z-10"
+    >
+      <motion.div
+        variants={itemVariants}
+        whileHover={{ scale: 1.2, x: 0, zIndex: 50 }}
+        className="size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
+      >
         <XLogo />
-      </div>
-      <div className="-translate-x-4 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
+      </motion.div>
+      <motion.div
+        variants={itemVariants}
+        whileHover={{ scale: 1.2, x: -10, zIndex: 50 }}
+        className="-translate-x-4 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
+      >
         <Tiktok />
-      </div>
-      <div className="-translate-x-8 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
+      </motion.div>
+      <motion.div
+        variants={itemVariants}
+        whileHover={{ scale: 1.2, x: -15, zIndex: 50 }}
+        className="-translate-x-8 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
+      >
         <Facebook />
-      </div>
+      </motion.div>
       {addInstagram && (
-        <div className="-translate-x-12 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.2, x: -25, zIndex: 50 }}
+          className="-translate-x-12 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
+        >
           <InstaLogo />
-        </div>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
@@ -158,7 +249,11 @@ function _Card({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-4xl w-full max-w-sm relative overflow-hidden min-h-[400px]">
+    <motion.div
+      variants={cardVariant}
+      whileHover={{ y: -10, transition: { duration: 0.3 } }}
+      className="rounded-4xl w-full max-w-sm relative overflow-hidden min-h-[400px] cursor-pointer"
+    >
       <Image
         alt="vision-bg"
         src={visionBg}
@@ -190,9 +285,15 @@ function _Card({
           <div className="md:text-5xl text-4xl text-center font-normal capitalize">
             {title}
           </div>
-          <div className="h-full card-image flex justify-center items-center relative my-4">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="h-full card-image flex justify-center items-center relative my-4"
+          >
             {hasGradient && (
-              <div
+              <motion.div
+                animate={{ opacity: [0.5, 0.8, 0.5] }}
+                transition={{ duration: 3, repeat: Infinity }}
                 className="absolute inset-0 blur-xl -z-10"
                 style={{
                   background:
@@ -201,13 +302,13 @@ function _Card({
               />
             )}
             {children}
-          </div>
+          </motion.div>
 
           <div className="text-center text-dark-grey text-base font-normal capitalize h-fit w-fit px-4 pb-2">
             {content}
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
