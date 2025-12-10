@@ -58,9 +58,6 @@ export const metadata: Metadata = {
     creator: "@playcope",
     images: ["/vision-background.png"],
   },
-  icons: {
-    icon: "/logo.svg",
-  },
   robots: {
     index: true,
     follow: true,
