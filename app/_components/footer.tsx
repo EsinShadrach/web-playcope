@@ -134,19 +134,31 @@ export function Footer() {
               className="flex gap-3 mt-10"
             >
               {[
-                <XLogo key="x" />,
-                <Tiktok key="tik" />,
-                <Facebook key="fb" />,
-                <InstaLogo key="ig" />,
-              ].map((Icon, i) => (
-                <motion.div
+                { icon: <XLogo />, url: "https://www.x.com/playcope/" },
+                {
+                  icon: <Tiktok />,
+                  url: "https://www.tiktok.com/@playcope.com",
+                },
+                {
+                  icon: <Facebook />,
+                  url: "https://www.facebook.com/share/17sSLqRSoJ/",
+                },
+                {
+                  icon: <InstaLogo />,
+                  url: "https://www.instagram.com/playcope",
+                },
+              ].map((item, i) => (
+                <motion.a
                   key={i}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variants={fadeInUp}
                   whileHover={hoverScale}
                   className="size-10 px-2.5 py-3 bg-light-grey rounded-full outline outline-dark-grey flex flex-col justify-center items-center gap-2.5 cursor-pointer"
                 >
-                  {Icon}
-                </motion.div>
+                  {item.icon}
+                </motion.a>
               ))}
             </motion.div>
           </div>

@@ -199,35 +199,47 @@ export function SocialMediasStack({
       viewport={{ margin: "-20%" }}
       className="flex items-center social-medias z-10"
     >
-      <motion.div
+      <motion.a
+        href="https://www.x.com/playcope/"
+        target="_blank"
+        rel="noopener noreferrer"
         variants={itemVariants}
         whileHover={{ scale: 1.2, x: 0, zIndex: 50 }}
         className="size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
       >
         <XLogo />
-      </motion.div>
-      <motion.div
+      </motion.a>
+      <motion.a
+        href="https://www.tiktok.com/@playcope.com"
+        target="_blank"
+        rel="noopener noreferrer"
         variants={itemVariants}
         whileHover={{ scale: 1.2, x: -10, zIndex: 50 }}
         className="-translate-x-4 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
       >
         <Tiktok />
-      </motion.div>
-      <motion.div
+      </motion.a>
+      <motion.a
+        href="https://www.facebook.com/share/17sSLqRSoJ/"
+        target="_blank"
+        rel="noopener noreferrer"
         variants={itemVariants}
         whileHover={{ scale: 1.2, x: -15, zIndex: 50 }}
         className="-translate-x-8 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
       >
         <Facebook />
-      </motion.div>
+      </motion.a>
       {addInstagram && (
-        <motion.div
+        <motion.a
+          href="https://www.instagram.com/playcope"
+          target="_blank"
+          rel="noopener noreferrer"
           variants={itemVariants}
           whileHover={{ scale: 1.2, x: -25, zIndex: 50 }}
           className="-translate-x-12 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
         >
           <InstaLogo />
-        </motion.div>
+        </motion.a>
       )}
     </motion.div>
   );

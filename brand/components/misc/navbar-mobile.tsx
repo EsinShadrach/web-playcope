@@ -1,9 +1,19 @@
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
-import { Star, Verify } from "@/brand/components/icons";
+import { Star, Tiktok, Verify } from "@/brand/components/icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { InstaLogo, XLogo } from "../icons";
 import { NavbarLogo } from "./navbar-logo";
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: { type: "spring" as const, stiffness: 200, damping: 20 },
+  },
+};
 
 export default function NavBarMobile({ hideText }: { hideText: boolean }) {
   const [isOpened, setIsOpened] = useState(false);
@@ -31,12 +41,28 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
             <NavbarLogo hideText={hideText} />
           </div>
           <div className="w-full" />
-          <button className="text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
-            <InstaLogo className="size-4" />
-          </button>
-          <button className="text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
-            <XLogo className="size-4" />
-          </button>
+          <div className="flex translate-x-6">
+            <motion.a
+              href="https://www.tiktok.com/@playcope.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.2, x: -10, zIndex: 50 }}
+              className="-translate-x-4 size-10 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
+            >
+              <Tiktok />
+            </motion.a>
+            <motion.a
+              href="https://www.instagram.com/playcope"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.2, x: -25, zIndex: 50 }}
+              className="-translate-x-6 size-10 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
+            >
+              <InstaLogo />
+            </motion.a>
+          </div>
           <button
             onClick={toggle}
             className="rounded-full size-12 px-3 outline-none flex items-center justify-center"

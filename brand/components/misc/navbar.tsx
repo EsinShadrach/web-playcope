@@ -2,10 +2,18 @@
 
 import { IconButton } from "@/brand/components/buttons/icon_button";
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
-import { InstaLogo, Star, Verify, XLogo } from "@/brand/components/icons";
+import {
+  Facebook,
+  InstaLogo,
+  Star,
+  Tiktok,
+  Verify,
+  XLogo,
+} from "@/brand/components/icons";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import NavBarMobile from "./navbar-mobile";
 import { NavbarLogo } from "./navbar-logo";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [hideText, setHideText] = useState(false);
@@ -19,6 +27,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const socialLinks = [
+    {
+      icon: <Tiktok className="size-4" />,
+      url: "https://www.tiktok.com/@playcope.com",
+    },
+    {
+      icon: <InstaLogo className="size-4" />,
+      url: "https://www.instagram.com/playcope",
+    },
+  ];
+
   return (
     <>
       <nav className="relative md:flex items-center w-full px-4 hidden">
@@ -31,14 +50,24 @@ export default function Navbar() {
         </div>
 
         {/* Right: Buttons */}
-        <div className="flex items-center ml-auto gap-4">
-          <button className="text-foreground border rounded-full p-3 border-dark-grey bg-light-grey">
-            <InstaLogo className="text-foreground size-6 fill-foreground" />
-          </button>
+        <div className="flex items-center ml-auto gap-2">
+          {socialLinks.map((link, i) => (
+            <motion.a
+              key={i}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-foreground border rounded-full p-3 border-dark-grey bg-light-grey flex justify-center items-center"
+            >
+              {link.icon}
+            </motion.a>
+          ))}
           <PrimaryButton
             icon={<Verify />}
             label="Become A Member"
-            className="text-background"
+            className="text-background ml-2"
           />
         </div>
       </nav>
