@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Playcope",
     images: [
       {
-        url: "/vision-background.png",
+        url: "/opengraph.jpg",
         width: 1200,
         height: 630,
         alt: "Playcope Football Intelligence",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description:
       "Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way.",
     creator: "@playcope",
-    images: ["/vision-background.png"],
+    images: ["/opengraph.jpg"],
   },
   robots: {
     index: true,
