@@ -3,22 +3,16 @@ export function AboutUs() {
     <section id="about-us" className="min-h-screen">
       <div className="container mx-auto p-3">
         <div className="px-6 py-2 bg-light-grey rounded-full w-fit mx-auto">
-          <span className="text-sm text-light-black font-normal uppercase tracking-wide">
+          <span className="text-sm md:text-lg text-light-black font-normal uppercase tracking-wide">
             About Us
           </span>
         </div>
-        <div className="flex gap-4 mt-10 max-w-300 mx-auto relative">
-          <div className="absolute left-[56.5%] bottom-0 -translate-x-1/2 text-primary z-10">
-            <StarThree />
-            <div className="absolute inset-0 flex justify-center items-center text-background font-bold">
-              2024
+        <div className="flex gap-4 mt-10 max-w-300 mx-auto relative md:flex-row flex-col">
+          <div className="relative border border-grey-1 rounded-4xl p-8 w-full max-w-2xl space-y-4">
+            <div className="text-light-black md:text-5xl text-4xl font-normal capitalize">
+              what is playcope..?
             </div>
-          </div>
-          <div className="border border-grey-1 rounded-4xl p-8 w-full max-w-2xl space-y-4">
-            <div className="text-light-black text-5xl font-normal capitalize">
-              what is playcope
-            </div>
-            <div className="text-dark-grey cap">
+            <div className="text-dark-grey md:text-base text-sm">
               Playcope is a football intelligence company built to help fans,
               bettors, analysts, and brands see football in a smarter way. We
               believe football isn&apos;t just about the final whistle it&apos;s
@@ -36,8 +30,16 @@ export function AboutUs() {
               that connect the dots between football and fan engagement shaping
               the future of how Africa and the world experience football.
             </div>
+
+            {/* Badge */}
+            <div className="year-badge absolute z-10 text-primary left-1/2 -translate-x-1/2 bottom-0 translate-y-[calc(50%+8px)] md:left-auto md:top-auto md:translate-y-0 md:right-0 md:translate-x-[calc(50%+8px)]">
+              <StarThree />
+              <div className="absolute inset-0 flex justify-center items-center text-background font-bold">
+                2024
+              </div>
+            </div>
           </div>
-          <div className="max-w-lg w-full border border-grey-1 rounded-4xl bg-linear-to-br from-primary/5 to-white/25 overflow-clip relative">
+          <div className="max-w-lg w-full border border-grey-1 rounded-4xl bg-linear-to-br from-primary/5 to-white/25 overflow-clip relative max-md:h-96">
             <div className="absolute -z-10 -bottom-20 -right-30">
               <div className="w-[455px] h-[455px] bg-linear-to-b from-stone-50 to-white rounded-full outline-2 outline-light-grey flex justify-center items-center">
                 <div className="w-80 h-80 bg-[#E9E9E93B] rounded-full outline-2 outline-light-grey flex justify-center items-center">
@@ -49,14 +51,14 @@ export function AboutUs() {
             </div>
 
             <div className="h-full flex flex-col justify-between py-6">
-              <div className="text-center text-light-black text-4xl font-normal capitalize">
+              <div className="text-center text-light-black text-3xl md:text-4xl font-normal capitalize">
                 we get up to
               </div>
               <div className="space-y-6">
-                <div className="text-center justify-start text-primary text-7xl font-bold capitalize">
+                <div className="text-center justify-start text-primary text-5xl md:text-7xl font-bold capitalize">
                   10M+
                 </div>
-                <div className="text-center justify-start text-dark-grey text-3xl font-normal capitalize">
+                <div className="text-center justify-start text-dark-grey text-2xl md:text-3xl font-normal capitalize">
                   monthly impressions
                 </div>
               </div>

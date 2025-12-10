@@ -87,7 +87,7 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
               transition={{ duration: 0.2, ease: "easeOut" }}
               className="absolute nav-drawer bg-light-grey inset-x-0 rounded-b-[10px] overflow-hidden"
             >
-              <_Tabs />
+              <_Tabs onSelect={() => setIsOpened(false)} />
               <div className="p-3 pb-7">
                 <PrimaryButton
                   icon={<Verify />}
@@ -103,7 +103,7 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
   );
 }
 
-function _Tabs() {
+function _Tabs({ onSelect }: { onSelect: () => void }) {
   const tabs = [
     { text: "Home", link: "#top" },
     { text: "Our Apps", link: "#our-apps" },
@@ -119,6 +119,10 @@ function _Tabs() {
           key={i}
           onClick={(e) => {
             setActiveTab(tab.text);
+
+            setTimeout(() => {
+              onSelect();
+            }, 300);
 
             e.preventDefault();
             const element = document.getElementById(tab.link.replace("#", ""));

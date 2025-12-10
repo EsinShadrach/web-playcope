@@ -17,11 +17,11 @@ export default function Home() {
 
       <Testimonials />
 
-      {/* <AboutUs /> */}
+      <AboutUs />
 
-      {/* <FAQs /> */}
+      <FAQs />
 
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
