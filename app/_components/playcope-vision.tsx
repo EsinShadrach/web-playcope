@@ -264,7 +264,7 @@ function _Card({
     <motion.div
       variants={cardVariant}
       whileHover={{ y: -10, transition: { duration: 0.3 } }}
-      className="rounded-4xl w-full max-w-sm relative overflow-hidden min-h-[400px] cursor-pointer"
+      className="rounded-4xl w-full max-w-sm relative overflow-hidden min-h-[400px] cursor-pointer max-md:mx-auto"
     >
       <Image
         alt="vision-bg"

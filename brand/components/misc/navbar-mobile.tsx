@@ -15,7 +15,13 @@ const itemVariants = {
   },
 };
 
-export default function NavBarMobile({ hideText }: { hideText: boolean }) {
+export default function NavBarMobile({
+  hideText,
+  showSocials,
+}: {
+  hideText: boolean;
+  showSocials: boolean;
+}) {
   const [isOpened, setIsOpened] = useState(false);
 
   function toggle() {
@@ -49,10 +55,10 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
               variants={itemVariants}
               initial={{ opacity: 0, scale: 0 }}
               animate={{
-                opacity: hideText ? 1 : 0,
-                scale: hideText ? 1 : 0,
+                opacity: showSocials ? 1 : 0,
+                scale: showSocials ? 1 : 0,
               }}
-              style={{ pointerEvents: hideText ? "auto" : "none" }}
+              style={{ pointerEvents: showSocials ? "auto" : "none" }}
               whileHover={{ scale: 1.2, x: -10, zIndex: 50 }}
               className="-translate-x-4 size-10 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
             >
@@ -65,10 +71,10 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
               variants={itemVariants}
               initial={{ opacity: 0, scale: 0 }}
               animate={{
-                opacity: hideText ? 1 : 0,
-                scale: hideText ? 1 : 0,
+                opacity: showSocials ? 1 : 0,
+                scale: showSocials ? 1 : 0,
               }}
-              style={{ pointerEvents: hideText ? "auto" : "none" }}
+              style={{ pointerEvents: showSocials ? "auto" : "none" }}
               whileHover={{ scale: 1.2, x: -25, zIndex: 50 }}
               className="-translate-x-6 size-10 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
             >

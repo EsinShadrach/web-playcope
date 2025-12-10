@@ -167,18 +167,7 @@ export function HomeHero() {
           className="max-md:w-full"
         >
           <PrimaryButton
-            icon={<ReceiveSquare />}
-            label="Download Our App"
-            className="text-background max-md:text-base max-md:w-full"
-          />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="max-md:w-full"
-        >
-          <PrimaryButton
-            icon={<Flash className="text-light-black!" />}
+            icon={<Flash className="text-background!" />}
             onClick={() => {
               const element = document.getElementById("our-apps");
               if (element) {
@@ -188,7 +177,7 @@ export function HomeHero() {
               }
             }}
             label="See Live Products"
-            className="bg-grey-1! max-md:text-base max-md:w-full"
+            className="text-background max-md:text-base max-md:w-full"
           />
         </motion.div>
       </motion.div>

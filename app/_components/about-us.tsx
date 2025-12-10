@@ -97,7 +97,7 @@ export function AboutUs() {
                 <StarThree />
               </motion.div>
               <div className="absolute inset-0 flex justify-center items-center text-background font-bold">
-                2024
+                {new Date().getFullYear()}
               </div>
             </motion.div>
           </motion.div>
@@ -148,7 +148,7 @@ export function AboutUs() {
                   transition={{ type: "spring", stiffness: 200, delay: 0.4 }}
                   className="text-center justify-start text-primary text-5xl md:text-7xl font-bold capitalize"
                 >
-                  10M+
+                  20M+
                 </motion.div>
                 <div className="text-center justify-start text-dark-grey text-2xl md:text-3xl font-normal capitalize">
                   monthly impressions

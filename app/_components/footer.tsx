@@ -88,7 +88,7 @@ export function Footer() {
             <br className="max-md:hidden" />
             professionals understand the game beyond the surface
           </motion.div>
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             className="w-fit flex justify-center items-center mx-auto mt-2"
           >
@@ -100,7 +100,7 @@ export function Footer() {
             >
               <PrimaryButton label="Follow Us" className="max-md:text-base" />
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </div>
         <Image
           alt="intelligence-starts-here"
@@ -235,13 +235,7 @@ export function Footer() {
           </div>
         </motion.div>
       </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ margin: "-20%" }}
-        variants={fadeInUp}
-        className="flex items-center justify-between md:my-20 md:text-lg text-xs my-10"
-      >
+      <div className="flex items-center justify-between md:mt-20 md:text-lg text-xs mt-10 mb-5">
         <div className="text-light-black font-normal capitalize">
           copyright {new Date().getFullYear()}
         </div>
@@ -253,7 +247,7 @@ export function Footer() {
             Privacy Policy
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
   ReceiveSquare,
 } from "@/brand/components/icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -99,7 +100,7 @@ export function OurApps() {
           <motion.div
             variants={cardVariant}
             whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-            className="h-150 rounded-4xl p-[0.5px] overflow-x-clip transform-gpu"
+            className="min-h-[600px] h-auto rounded-4xl p-[0.5px] overflow-x-clip transform-gpu"
             style={{
               background:
                 "linear-gradient(to bottom right, #FF3B3066 25%, #0D4FF7 50%, #FFFFFF 90%)",
@@ -189,11 +190,13 @@ export function OurApps() {
                   whileTap={{ scale: 0.95 }}
                   className="max-md:w-full"
                 >
-                  <PrimaryButton
-                    icon={<Logout />}
-                    label="Visit Website"
-                    className="text-light-black bg-light-grey! hover:bg-grey-1! md:text-lg text-base max-md:w-full"
-                  />
+                  <Link href={"https://www.puntrr.ai"} target="_blank">
+                    <PrimaryButton
+                      icon={<Logout />}
+                      label="Visit Website"
+                      className="text-light-black bg-light-grey! hover:bg-grey-1! md:text-lg text-base max-md:w-full"
+                    />
+                  </Link>
                 </motion.div>
               </div>
               <div className="text-center text-dark-grey text-base md:text-lg font-normal capitalize mt-6">

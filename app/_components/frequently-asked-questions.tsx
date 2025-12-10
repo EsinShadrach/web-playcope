@@ -22,6 +22,79 @@ const staggerContainer = {
 };
 
 export function FAQs() {
+  const faqs = [
+    {
+      title: "Is Playcope a betting company?",
+      subtitle: (
+        <span>
+          No.
+          <br />
+          Playcope does not operate as a betting platform and does not accept
+          wagers.
+          <br />
+          We build tools that analyze football data and present insights.
+        </span>
+      ),
+    },
+    {
+      title: "What products does Playcope have?",
+      subtitle: (
+        <span>
+          Playcope houses multiple football-focused products, including:
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Puntrr – a predictions and match-insights platform</li>
+            <li>
+              Other upcoming tools focused on football, stats, and football
+              analytics
+            </li>
+          </ul>
+        </span>
+      ),
+    },
+    {
+      title: "What is Puntrr by Playcope?",
+      subtitle:
+        "Puntrr is a Playcope product designed to help users understand football matches through AI-powered predictions, data insights.",
+    },
+    {
+      title: "Does Playcope place bets for users?",
+      subtitle: (
+        <span>
+          No.
+          <br />
+          Neither Playcope nor its products place bets or handle betting
+          transactions.
+        </span>
+      ),
+    },
+    {
+      title: "Who is Playcope for?",
+      subtitle: (
+        <span>
+          Playcope products are built for:
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Football fans</li>
+            <li>Data-driven users</li>
+            <li>Analysts and enthusiasts looking for clarity, not noise</li>
+          </ul>
+        </span>
+      ),
+    },
+    {
+      title: "Is Playcope focused on betting only?",
+      subtitle: (
+        <span>
+          No.
+          <br />
+          Predictions are one part of a wider football-intelligence ecosystem.
+          <br />
+          Playcope&apos;s long-term vision includes, performance insights, and
+          fan-focused tools.
+        </span>
+      ),
+    },
+  ];
+
   return (
     <section id="faq" className="min-h-screen max-md:mt-20">
       <motion.div
@@ -50,33 +123,22 @@ export function FAQs() {
           variants={staggerContainer}
           className="flex flex-col gap-6 mt-10 max-w-5xl mx-auto"
         >
-          <FaqTile
-            title="What is Playcope?"
-            subtitle="Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way."
-          />
-          <FaqTile
-            title="What is Playcope?"
-            subtitle="Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way."
-          />
-          <FaqTile
-            title="What is Playcope?"
-            subtitle="Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way."
-          />
-          <FaqTile
-            title="What is Playcope?"
-            subtitle="Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way."
-          />
-          <FaqTile
-            title="What is Playcope?"
-            subtitle="Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way."
-          />
+          {faqs.map((faq, index) => (
+            <FaqTile key={index} {...faq} />
+          ))}
         </motion.div>
       </motion.div>
     </section>
   );
 }
 
-function FaqTile({ title, subtitle }: { title: string; subtitle: string }) {
+function FaqTile({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: React.ReactNode;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -99,7 +161,7 @@ function FaqTile({ title, subtitle }: { title: string; subtitle: string }) {
       >
         <div className="w-full focus:outline-none flex items-center justify-between bg-transparent pointer-events-none">
           <div
-            className={`text-lg md:text-xl text-left pointer-events-none transition-colors duration-300 ${
+            className={`text-base md:text-xl text-left pointer-events-none transition-colors duration-300 ${
               open ? "text-foreground" : "text-dark-grey"
             }`}
           >

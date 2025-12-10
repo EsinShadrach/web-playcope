@@ -4,6 +4,7 @@ import { IconButton } from "@/brand/components/buttons/icon_button";
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 import {
   Facebook,
+  Flash,
   InstaLogo,
   ReceiveSquare,
   Star,
@@ -18,10 +19,17 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [hideText, setHideText] = useState(false);
+  const [showSocials, setShowSocials] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setHideText(window.scrollY > 40);
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const isBottom = windowHeight + scrollY >= documentHeight - 100;
+
+      setHideText(scrollY > 40);
+      setShowSocials(scrollY > 40 && !isBottom);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
@@ -66,13 +74,21 @@ export default function Navbar() {
             </motion.a>
           ))}
           <PrimaryButton
-            icon={<ReceiveSquare />}
-            label="Download Our app"
+            icon={<Flash />}
+            label="See Live Products"
+            onClick={() => {
+              const element = document.getElementById("our-apps");
+              if (element) {
+                const y =
+                  element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
             className="text-background ml-2"
           />
         </div>
       </nav>
-      <NavBarMobile hideText={hideText} />
+      <NavBarMobile hideText={hideText} showSocials={showSocials} />
     </>
   );
 }
