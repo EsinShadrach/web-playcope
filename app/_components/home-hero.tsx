@@ -130,9 +130,9 @@ export function HomeHero() {
           variants={fadeInUp}
           className="flex w-fit mx-auto md:gap-4 items-center justify-center"
         >
-          <div className="text-center text-light-black text-4xl md:text-7xl font-normal capitalize">
+          <h1 className="text-center text-light-black text-4xl md:text-7xl font-normal capitalize">
             One Ecosystem
-          </div>
+          </h1>
           <div className="md:block hidden">
             <FollowersCount />
           </div>
@@ -141,7 +141,7 @@ export function HomeHero() {
           variants={fadeInUp}
           className="text-center text-4xl md:text-7xl font-normal capitalize md:pt-3 pt-1"
         >
-          Endless Football
+          <h2>Endless Football</h2>
         </motion.div>
       </motion.div>
       <motion.div
