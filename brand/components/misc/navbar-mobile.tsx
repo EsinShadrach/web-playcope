@@ -19,7 +19,7 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
   return (
     <nav>
       <div
-        className={`z-10 relative md:hidden flex bg-light-grey mt-5 w-full p-2 items-center border-b  ${
+        className={`z-10 relative md:hidden flex bg-light-grey/80 backdrop-blur-lg mt-5 w-full p-2 items-center border-b  ${
           isOpened ? "border-grey-1" : "rounded-full border-transparent"
         }`}
         style={{
