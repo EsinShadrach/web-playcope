@@ -1,5 +1,5 @@
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
-import { Star, Tiktok, Verify } from "@/brand/components/icons";
+import { ReceiveSquare, Star, Tiktok, Verify } from "@/brand/components/icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { InstaLogo, XLogo } from "../icons";
@@ -47,6 +47,12 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{
+                opacity: hideText ? 1 : 0,
+                scale: hideText ? 1 : 0,
+              }}
+              style={{ pointerEvents: hideText ? "auto" : "none" }}
               whileHover={{ scale: 1.2, x: -10, zIndex: 50 }}
               className="-translate-x-4 size-10 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
             >
@@ -57,6 +63,12 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{
+                opacity: hideText ? 1 : 0,
+                scale: hideText ? 1 : 0,
+              }}
+              style={{ pointerEvents: hideText ? "auto" : "none" }}
               whileHover={{ scale: 1.2, x: -25, zIndex: 50 }}
               className="-translate-x-6 size-10 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
             >
@@ -116,8 +128,8 @@ export default function NavBarMobile({ hideText }: { hideText: boolean }) {
               <_Tabs onSelect={() => setIsOpened(false)} />
               <div className="p-3 pb-7">
                 <PrimaryButton
-                  icon={<Verify />}
-                  label="Become A Member"
+                  icon={<ReceiveSquare />}
+                  label="Download Our app"
                   className="w-full text-background max-md:text-base"
                 />
               </div>

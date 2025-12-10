@@ -75,7 +75,7 @@ export default function RootLayout({
         className={`${spacGrotesk.variable} antialiased font-sans overflow-x-hidden`}
       >
         <SmoothScrolling>
-          <header className="container sticky z-50 md:p-3 px-3 mx-auto top-5">
+          <header className="container sticky z-50 px-3 mx-auto md:p-3 top-5">
             <Navbar />
           </header>
           {children}

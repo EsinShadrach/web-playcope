@@ -4,6 +4,7 @@ import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 import {
   Facebook,
   Flash,
+  ReceiveSquare,
   Tiktok,
   Verify,
   XLogo,
@@ -166,8 +167,8 @@ export function HomeHero() {
           className="max-md:w-full"
         >
           <PrimaryButton
-            icon={<Verify />}
-            label="Become A Member"
+            icon={<ReceiveSquare />}
+            label="Download Our App"
             className="text-background max-md:text-base max-md:w-full"
           />
         </motion.div>
@@ -178,6 +179,14 @@ export function HomeHero() {
         >
           <PrimaryButton
             icon={<Flash className="text-light-black!" />}
+            onClick={() => {
+              const element = document.getElementById("our-apps");
+              if (element) {
+                const y =
+                  element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
             label="See Live Products"
             className="bg-grey-1! max-md:text-base max-md:w-full"
           />
@@ -285,7 +294,7 @@ function FollowersCount() {
           500k+ football fans
         </div>
         <div className="md:text-lg font-normal capitalize">
-          trusts and follows us
+          Trust And Follows Us
         </div>
       </div>
     </div>

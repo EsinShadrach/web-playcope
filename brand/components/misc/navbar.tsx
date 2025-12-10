@@ -5,6 +5,7 @@ import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 import {
   Facebook,
   InstaLogo,
+  ReceiveSquare,
   Star,
   Tiktok,
   Verify,
@@ -65,8 +66,8 @@ export default function Navbar() {
             </motion.a>
           ))}
           <PrimaryButton
-            icon={<Verify />}
-            label="Become A Member"
+            icon={<ReceiveSquare />}
+            label="Download Our app"
             className="text-background ml-2"
           />
         </div>

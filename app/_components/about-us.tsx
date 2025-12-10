@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -69,14 +70,19 @@ export function AboutUs() {
               artificial intelligence. Our mission is to make the game clearer,
               more predictable, and more exciting for everyone from casual fans
               to serious analysts. Our first product,{" "}
-              <span className="text-foreground font-semibold">Puntrr</span>,
-              brings that vision to life using AI to help users make smarter
+              <Link href={"https://www.puntrr.ai"} target="_blank">
+                <span className="text-primary font-semibold">Puntrr</span>
+              </Link>
+              , brings that vision to life using AI to help users make smarter
               football predictions through real-time stats, risk analysis, and
               performance insights, but{" "}
-              <span className="text-foreground font-semibold">Puntrr</span> is
-              just the beginning. Playcope is building a full ecosystem of tools
-              that connect the dots between football and fan engagement shaping
-              the future of how Africa and the world experience football.
+              <Link href={"https://www.puntrr.ai"} target="_blank">
+                <span className="text-primary font-semibold">Puntrr </span>
+              </Link>
+              is just the beginning. Playcope is building a full ecosystem of
+              tools that connect the dots between football and fan engagement
+              shaping the future of how Africa and the world experience
+              football.
             </div>
 
             {/* Badge */}

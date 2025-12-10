@@ -200,14 +200,14 @@ export function SocialMediasStack({
       className="flex items-center social-medias z-10"
     >
       <motion.a
-        href="https://www.x.com/playcope/"
+        href="https://www.instagram.com/playcope"
         target="_blank"
         rel="noopener noreferrer"
         variants={itemVariants}
         whileHover={{ scale: 1.2, x: 0, zIndex: 50 }}
         className="size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
       >
-        <XLogo />
+        <InstaLogo />
       </motion.a>
       <motion.a
         href="https://www.tiktok.com/@playcope.com"
@@ -231,14 +231,14 @@ export function SocialMediasStack({
       </motion.a>
       {addInstagram && (
         <motion.a
-          href="https://www.instagram.com/playcope"
+          href="https://www.x.com/playcope/"
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}
           whileHover={{ scale: 1.2, x: -25, zIndex: 50 }}
           className="-translate-x-12 size-12 flex justify-center items-center text-foreground border rounded-full p-3 border-dark-grey bg-light-grey relative"
         >
-          <InstaLogo />
+          <XLogo />
         </motion.a>
       )}
     </motion.div>
