@@ -17,6 +17,7 @@ import bundesliga from "@/public/new/bundesliga.svg";
 import laliga from "@/public/new/laliga.svg";
 import serieA from "@/public/new/seriea.svg";
 import mls from "@/public/new/mls.svg";
+import { motion } from "framer-motion";
 import { SocialMediasStack } from "./playcope-vision";
 import { useEffect, useRef, useState, CSSProperties } from "react";
 
@@ -50,6 +51,21 @@ const leagues = [
     image: mls,
   },
 ];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const PanoramaBg = () => {
   return (
@@ -98,41 +114,80 @@ export function HomeHero() {
 
   return (
     <section id="top" className="min-h-screen mt-12 md:mt-24 overflow-x-clip">
-      <div className="max-md:px-4">
-        <div className="w-fit mx-auto mb-5 md:hidden">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+        className="max-md:px-4"
+      >
+        <motion.div
+          variants={fadeInUp}
+          className="w-fit mx-auto mb-5 md:hidden"
+        >
           <FollowersCount />
-        </div>
-        <div className="flex w-fit mx-auto md:gap-4 items-center justify-center">
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="flex w-fit mx-auto md:gap-4 items-center justify-center"
+        >
           <div className="text-center text-light-black text-4xl md:text-7xl font-normal capitalize">
             One Ecosystem
           </div>
           <div className="md:block hidden">
             <FollowersCount />
           </div>
-        </div>
-        <div className="text-center text-4xl md:text-7xl font-normal capitalize md:pt-3 pt-1">
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="text-center text-4xl md:text-7xl font-normal capitalize md:pt-3 pt-1"
+        >
           Endless Football
-        </div>
-      </div>
-      <div className="text-center text-dark-grey text-base md:text-xl font-normal capitalize md:leading-8 pt-5 max-md:px-4">
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="text-center text-dark-grey text-base md:text-xl font-normal capitalize md:leading-8 pt-5 max-md:px-4"
+      >
         Our products combine cutting-edge AI with football intuition{" "}
         <br className="md:block hidden" />
         to help you understand, predict, and enjoy the game on a whole new level
-      </div>
-      <div className="flex items-center justify-center gap-4 pt-5 md:flex-row flex-col max-md:px-4">
-        <PrimaryButton
-          icon={<Verify />}
-          label="Become A Member"
-          className="text-background max-md:text-base max-md:w-full"
-        />
-        <PrimaryButton
-          icon={<Flash className="text-light-black!" />}
-          label="See Live Products"
-          className="bg-grey-1! max-md:text-base max-md:w-full"
-        />
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+        className="flex items-center justify-center gap-4 pt-5 md:flex-row flex-col max-md:px-4"
+      >
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="max-md:w-full"
+        >
+          <PrimaryButton
+            icon={<Verify />}
+            label="Become A Member"
+            className="text-background max-md:text-base max-md:w-full"
+          />
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="max-md:w-full"
+        >
+          <PrimaryButton
+            icon={<Flash className="text-light-black!" />}
+            label="See Live Products"
+            className="bg-grey-1! max-md:text-base max-md:w-full"
+          />
+        </motion.div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
         ref={containerRef}
         className="relative mt-10 md:mt-18 w-full"
         style={{ height: 680 * scale }}
@@ -215,7 +270,7 @@ export function HomeHero() {
             style={{ width: 1728, height: "auto" }}
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
