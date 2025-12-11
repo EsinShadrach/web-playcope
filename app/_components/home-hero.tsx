@@ -1,26 +1,19 @@
 "use client";
 
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
-import {
-  Facebook,
-  Flash,
-  ReceiveSquare,
-  Tiktok,
-  Verify,
-  XLogo,
-} from "@/brand/components/icons";
-import panorama from "@/public/new/panorama.png";
-import Image from "next/image";
-import premierLeague from "@/public/new/premier-league.svg";
-import uefa from "@/public/new/uefa.svg";
-import ligue1 from "@/public/new/ligue1.svg";
+import { Flash } from "@/brand/components/icons";
 import bundesliga from "@/public/new/bundesliga.svg";
 import laliga from "@/public/new/laliga.svg";
-import serieA from "@/public/new/seriea.svg";
+import ligue1 from "@/public/new/ligue1.svg";
 import mls from "@/public/new/mls.svg";
+import panorama from "@/public/new/panorama.png";
+import premierLeague from "@/public/new/premier-league.svg";
+import serieA from "@/public/new/seriea.svg";
+import uefa from "@/public/new/uefa.svg";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import { SocialMediasStack } from "./playcope-vision";
-import { useEffect, useRef, useState, CSSProperties } from "react";
 
 const leagues = [
   {
@@ -88,6 +81,9 @@ const PanoramaBg = () => {
 const TOP_PATH = 'path("M-94 0 C 649.056 216.861, 1068.39 224.559, 1822 0")';
 const BOTTOM_PATH =
   'path("M-94 680 C 649.104 459.126, 1068.32 446.396, 1822 680")';
+
+const PANORAMA_CLIP_PATH =
+  'path("M-94 0C649.056 216.861 1068.39 224.559 1822 0V680C1068.32 446.396 649.104 459.126 -94 680V0Z")';
 
 export function HomeHero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -263,9 +259,14 @@ export function HomeHero() {
 
           <Image
             alt="panorama"
-            src={panorama}
             className="z-10"
-            style={{ width: 1728, height: "auto" }}
+            src={panorama}
+            style={{
+              width: 1728,
+              height: 680,
+              objectFit: "cover",
+              clipPath: PANORAMA_CLIP_PATH,
+            }}
           />
         </div>
       </motion.div>
