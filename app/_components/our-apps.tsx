@@ -34,16 +34,23 @@ const staggerContainer = {
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, scale: 0.95, rotateX: 10 },
+  hidden: { opacity: 0, scale: 0.95, rotateX: 10, backgroundPosition: "0% 0%" },
   visible: {
     opacity: 1,
     scale: 1,
     rotateX: 0,
+    backgroundPosition: ["0% 0%", "100% 100%"],
     transition: {
       type: "spring" as const,
       damping: 20,
       stiffness: 100,
       delay: 0.2,
+      backgroundPosition: {
+        duration: 3,
+        repeat: Infinity,
+        repeatType: "reverse" as const,
+        ease: "linear",
+      },
     },
   },
 };
@@ -104,9 +111,10 @@ export function OurApps() {
             style={{
               background:
                 "linear-gradient(to bottom right, #FF3B3066 25%, #0D4FF7 50%, #FFFFFF 90%)",
+              backgroundSize: "200% 200%",
             }}
           >
-            <div className="bg-background h-full w-full rounded-[31.5px] px-0 p-6">
+            <div className="bg-background h-[600px] w-full rounded-[31.5px] px-0 p-6">
               <div className="flex justify-between items-center pb-6 px-6">
                 <div className="size-10" />
                 <div className="flex items-center text-primary mx-auto w-fit">
