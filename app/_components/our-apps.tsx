@@ -10,6 +10,12 @@ import {
 } from "@/brand/components/icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import avatar1 from "@/public/new/avatar-1.png";
+import avatar2 from "@/public/new/avatar-2.png";
+import avatar3 from "@/public/new/avatar-3.png";
+import avatar4 from "@/public/new/avatar-4.png";
+import avatar5 from "@/public/new/avatar-5.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -154,7 +160,32 @@ export function OurApps() {
                         <span>10,000+ daily users</span>
                       </div>
                     </div>
-                    <div className="mt-5 flex flex-col justify-center">
+                    <div className="mt-5 flex flex-col justify-center relative w-fit mx-auto">
+                      <Image
+                        alt="avatar-1"
+                        src={avatar1}
+                        className="size-17 md:size-22 absolute -top-10 md:-top-12 -left-17 md:-left-24"
+                      />
+                      <Image
+                        alt="avatar-2"
+                        src={avatar2}
+                        className="size-17 md:size-22 absolute -bottom-18 -left-5 md:-left-24"
+                      />
+                      <Image
+                        alt="avatar-3"
+                        src={avatar3}
+                        className="size-17 md:size-22 absolute -bottom-24 right-10 md:left-20"
+                      />
+                      <Image
+                        alt="avatar-4"
+                        src={avatar4}
+                        className="size-17 md:size-22 absolute -bottom-10 md:-bottom-28 -right-16 md:-right-15"
+                      />
+                      <Image
+                        alt="avatar-5"
+                        src={avatar5}
+                        className="size-17 md:size-22 absolute -top-1 md:-bottom-28 -right-16 md:-right-25"
+                      />
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -177,7 +208,7 @@ export function OurApps() {
                   </div>
                 </div>
               </motion.div>
-              <div className="text-center text-dark-grey text-base md:text-xl font-normal mt-6 capitalize">
+              <div className="text-center text-dark-grey text-base md:text-xl font-normal md:mt-16 mt-6 capitalize">
                 Puntrr uses AI to analyze stats, form, and performance trends
                 helping you bet with strategy, not emotion.
               </div>
