@@ -6,8 +6,11 @@ import bundesliga from "@/public/new/bundesliga.svg";
 import laliga from "@/public/new/laliga.svg";
 import ligue1 from "@/public/new/ligue1.svg";
 import mls from "@/public/new/mls.svg";
-import panorama from "@/public/new/panorama.png";
 import premierLeague from "@/public/new/premier-league.svg";
+import premierLeagueSoccer from "@/public/new/premier-soccer-league.png";
+import npfl from "@/public/new/npfl.png";
+import afcon from "@/public/new/afcon.png";
+import worldCup from "@/public/new/FIFA.png";
 import serieA from "@/public/new/seriea.svg";
 import uefa from "@/public/new/uefa.svg";
 import { AnimatePresence, motion } from "framer-motion";
@@ -43,6 +46,22 @@ const leagues = [
   {
     name: "Major League Soccer",
     image: mls,
+  },
+  {
+    name: "Nigerian Premier Football League",
+    image: npfl,
+  },
+  {
+    name: "Premier League Soccer",
+    image: premierLeagueSoccer,
+  },
+  {
+    name: "Africa Cup of Nations",
+    image: afcon,
+  },
+  {
+    name: "FIFA World Cup",
+    image: worldCup,
   },
 ];
 
@@ -124,9 +143,10 @@ const PanoramaBg = () => {
   );
 };
 
-const TOP_PATH = 'path("M-94 0 C 649.056 216.861, 1068.39 224.559, 1822 0")';
-const BOTTOM_PATH =
-  'path("M-94 680 C 649.104 459.126, 1068.32 446.396, 1822 680")';
+const EXTENDED_TOP_PATH =
+  'path("M -1000 0 L -94 0 C 649.056 216.861, 1068.39 224.559, 1822 0 L 3000 0")';
+const EXTENDED_BOTTOM_PATH =
+  'path("M -1000 680 L -94 680 C 649.104 459.126, 1068.32 446.396, 1822 680 L 3000 680")';
 
 const PANORAMA_CLIP_PATH =
   'path("M-94 0C649.056 216.861 1068.39 224.559 1822 0V680C1068.32 446.396 649.104 459.126 -94 680V0Z")';
@@ -284,9 +304,9 @@ export function HomeHero() {
                 className="absolute flex items-center gap-3 md:-top-8 -top-10"
                 style={
                   {
-                    offsetPath: TOP_PATH,
-                    animation: `marquee-backward 30s linear infinite`,
-                    animationDelay: `-${(index / leagues.length) * 30}s`,
+                    offsetPath: EXTENDED_TOP_PATH,
+                    animation: `marquee-backward 50s linear infinite`,
+                    animationDelay: `-${(index / leagues.length) * 50}s`,
                     offsetRotate: "auto",
                   } as CSSProperties
                 }
@@ -294,7 +314,7 @@ export function HomeHero() {
                 <Image
                   src={league.image}
                   alt={league.name}
-                  className="size-12 md:size-10"
+                  className="size-12 md:size-10 object-cover"
                 />
                 <span className="text-xl md:text-sm font-semibold text-light-black/60 uppercase tracking-wider">
                   {league.name}
@@ -320,9 +340,9 @@ export function HomeHero() {
                 className="absolute flex items-center gap-3 md:top-8 top-9"
                 style={
                   {
-                    offsetPath: BOTTOM_PATH,
-                    animation: `marquee-forward 30s linear infinite`,
-                    animationDelay: `-${(index / leagues.length) * 30}s`,
+                    offsetPath: EXTENDED_BOTTOM_PATH,
+                    animation: `marquee-forward 50s linear infinite`,
+                    animationDelay: `-${(index / leagues.length) * 50}s`,
                     offsetRotate: "auto",
                   } as CSSProperties
                 }
@@ -330,7 +350,7 @@ export function HomeHero() {
                 <Image
                   src={league.image}
                   alt={league.name}
-                  className="size-12 md:size-10"
+                  className="size-12 md:size-10 object-cover"
                 />
                 <span className="text-xl md:text-sm font-semibold text-light-black/60 uppercase tracking-wider">
                   {league.name}
