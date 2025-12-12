@@ -57,7 +57,7 @@ export function PlaycopeVision() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-20%" }}
+        viewport={{ once: false, margin: "-20%" }}
         variants={staggerContainer}
         className="container mx-auto p-3"
       >
