@@ -181,7 +181,7 @@ function WireItemsMarquee() {
   const animationDuration = 50; // seconds
 
   return (
-    <div className="relative h-full -translate-y-8">
+    <div className="relative h-full md:-translate-y-8 -translate-y-12">
       <div className="w-full">
         <svg
           className="text-dark-grey curved-line curved-wire mx-auto"
