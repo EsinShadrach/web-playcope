@@ -185,6 +185,8 @@ export function HomeHero() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [videoSrc, setVideoSrc] = useState<string>("");
+
   useEffect(() => {
     const videoElement = videoRef.current;
     if (!videoElement) return;
@@ -193,6 +195,8 @@ export function HomeHero() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Lazy load the video source when it becomes visible
+            setVideoSrc("/new/hero-video-optimized.mp4");
             videoElement.play().catch(() => {
               // Auto-play was prevented
             });
@@ -361,7 +365,6 @@ export function HomeHero() {
 
           <video
             ref={videoRef}
-            autoPlay
             muted={isMuted} // Controlled by state
             loop
             playsInline
@@ -373,7 +376,7 @@ export function HomeHero() {
               clipPath: PANORAMA_CLIP_PATH,
             }}
           >
-            <source src={"/new/hero-video-optimized.mp4"} type="video/mp4" />
+            {videoSrc && <source src={videoSrc} type="video/mp4" />}
           </video>
           {/* Transparent overlay for click detection on the video area */}
           <div

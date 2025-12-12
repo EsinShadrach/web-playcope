@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import wireItem1 from "@/public/new/wire-item-1.jpg";
 import wireItem2 from "@/public/new/wire-item-2.jpg";
 import wireItem3 from "@/public/new/wire-item-3.png";
-import wireItem4 from "@/public/new/wire-item-4.jpg";
 import wireItem5 from "@/public/new/wire-item-5.jpg";
 import wireItem6 from "@/public/new/wire-item-6.jpeg";
 import wireItem7 from "@/public/new/wire-item-7.jpeg";
@@ -171,7 +170,6 @@ function WireItemsMarquee() {
     wireItem1,
     wireItem2,
     wireItem3,
-    wireItem4,
     wireItem5,
     wireItem6,
     wireItem7,
