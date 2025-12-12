@@ -10,8 +10,8 @@ import wireItem2 from "@/public/new/wire-item-2.jpg";
 import wireItem3 from "@/public/new/wire-item-3.png";
 import wireItem4 from "@/public/new/wire-item-4.jpg";
 import wireItem5 from "@/public/new/wire-item-5.jpg";
-import wireItem6 from "@/public/new/wire-item-6.webp";
-import wireItem7 from "@/public/new/wire-item-7.webp";
+import wireItem6 from "@/public/new/wire-item-6.jpeg";
+import wireItem7 from "@/public/new/wire-item-7.jpeg";
 import wireItem8 from "@/public/new/wire-item-8.jpg";
 import wireItem9 from "@/public/new/wire-item-9.jpg";
 
