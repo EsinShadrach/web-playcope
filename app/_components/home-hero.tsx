@@ -48,15 +48,15 @@ const leagues = [
     image: mls,
   },
   {
-    name: "Nigerian Premier Football League",
+    name: "NPFL",
     image: npfl,
   },
   {
-    name: "Premier League Soccer",
+    name: "PLS",
     image: premierLeagueSoccer,
   },
   {
-    name: "Africa Cup of Nations",
+    name: "AFCON",
     image: afcon,
   },
   {

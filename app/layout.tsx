@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Navbar from "@/brand/components/misc/navbar";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import SmoothScrolling from "./_components/smooth-scrolling";
 
 const spacGrotesk = Space_Grotesk({
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body
         className={`${spacGrotesk.variable} antialiased font-sans overflow-x-hidden`}
       >
+        <Analytics />
         <SmoothScrolling>
           <header className="container sticky z-50 px-3 mx-auto md:p-3 top-5">
             <Navbar />
