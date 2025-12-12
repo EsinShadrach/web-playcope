@@ -3,13 +3,17 @@
 import tribalPattern from "@/public/new/tribal-patterns.png";
 import visionBg from "@/public/new/vision-bg.png";
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { CSSProperties } from "react";
 import { motion } from "framer-motion";
 import wireItem1 from "@/public/new/wire-item-1.jpg";
 import wireItem2 from "@/public/new/wire-item-2.jpg";
 import wireItem3 from "@/public/new/wire-item-3.png";
 import wireItem4 from "@/public/new/wire-item-4.jpg";
 import wireItem5 from "@/public/new/wire-item-5.jpg";
+import wireItem6 from "@/public/new/wire-item-6.webp";
+import wireItem7 from "@/public/new/wire-item-7.webp";
+import wireItem8 from "@/public/new/wire-item-8.jpg";
+import wireItem9 from "@/public/new/wire-item-9.jpg";
 
 import { PrimaryButton } from "@/brand/components/buttons/primary_button";
 import {
@@ -130,40 +134,7 @@ export function PlaycopeVision() {
             title="Expand"
             content="Built in Africa, aimed at the world. Through scalable tools and key partnerships, we’re creating a global ecosystem for football data and fandom."
           >
-            <div className="relative h-full">
-              <div className="w-full">
-                <svg
-                  className="text-dark-grey curved-line curved-wire mx-auto"
-                  width="427"
-                  height="35"
-                  viewBox="0 0 427 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M-33 0.48877C156.649 46.5832 264.85 42.4184 460 0.48877"
-                    stroke="currentColor"
-                  />
-                </svg>
-              </div>
-              <div className="flex gap-4">
-                <div className="origin-top-left rotate-10 -translate-y-11.5">
-                  <ImageCard src={wireItem1} />
-                </div>
-                <div className="origin-top-left rotate-[7deg] -translate-y-7">
-                  <ImageCard src={wireItem2} />
-                </div>
-                <div className="-translate-y-4">
-                  <ImageCard src={wireItem3} />
-                </div>
-                <div className="origin-top-left -rotate-[7deg] -translate-y-5">
-                  <ImageCard src={wireItem4} />
-                </div>
-                <div className="origin-top-left -rotate-10 -translate-y-8.5">
-                  <ImageCard src={wireItem5} />
-                </div>
-              </div>
-            </div>
+            <WireItemsMarquee />
           </_Card>
         </div>
         <motion.div
@@ -192,14 +163,82 @@ export function PlaycopeVision() {
   );
 }
 
-export default function ImageCard({ src }: { src: StaticImageData }) {
+const EXTENDED_WIRE_PATH =
+  'path("M -200 10 L -33 0.48877 C 156.649 46.5832 264.85 42.4184 460 0.48877 L 600 10")';
+
+function WireItemsMarquee() {
+  const wireItems = [
+    wireItem1,
+    wireItem2,
+    wireItem3,
+    wireItem4,
+    wireItem5,
+    wireItem6,
+    wireItem7,
+    wireItem8,
+    wireItem9,
+  ];
+
+  // Duration for the full path traversal
+  const animationDuration = 50; // seconds
+
+  return (
+    <div className="relative h-full -translate-y-8">
+      <div className="w-full">
+        <svg
+          className="text-dark-grey curved-line curved-wire mx-auto"
+          width="427"
+          height="35"
+          viewBox="0 0 427 35"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M-33 0.48877C156.649 46.5832 264.85 42.4184 460 0.48877"
+            stroke="currentColor"
+          />
+        </svg>
+      </div>
+      <div className="wire-items-container">
+        {wireItems.map((item, index) => (
+          <div
+            key={`wire-${index}`}
+            className="absolute"
+            style={
+              {
+                offsetPath: EXTENDED_WIRE_PATH,
+                // Move backward (100% -> 0%) which is Right -> Left on our path
+                animation: `marquee-backward ${animationDuration}s linear infinite`,
+                // Stagger items evenly along the timeline
+                animationDelay: `-${
+                  (index / wireItems.length) * animationDuration
+                }s`,
+                offsetRotate: "0deg",
+              } as CSSProperties
+            }
+          >
+            <ImageCard src={item} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function ImageCard({
+  src,
+  index,
+}: {
+  index?: number;
+  src: StaticImageData;
+}) {
   return (
     <div className="flex flex-col items-center max-w-fit">
       <div className="w-5 h-6 px-1 py-1.5 bg-primary rounded-lg inline-flex justify-center items-start translate-y-1.5 wire-clip relative z-40">
         <div className="w-2 h-2 bg-white rounded-full" />
       </div>
 
-      <div className="border-2 border-primary size-20 rounded-2xl overflow-clip">
+      <div className="border-2 border-primary size-18 rounded-2xl overflow-clip">
         <Image
           alt="wire-image"
           src={src}
