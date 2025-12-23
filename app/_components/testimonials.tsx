@@ -9,7 +9,7 @@ import person5 from "@/public/new/person-5.svg";
 const testimonials = [
   {
     content:
-      "Playcope Is Actually Changing The Game 🔥. The AI Predictions Are Spot On And The Stats Make Betting Way Easier. Real Lifesaver!",
+      "Playcope Is Actually Changing The Game 🔥. The AI Predictions Are Spot On And The Stats Make Predicting Games Way Easier. Real Lifesaver!",
     name: "Ancient Tibetan Monk Rafe",
     role: "Social Media User",
     avatar: person1,
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     content:
-      "Playcope Is Actually Changing The Game 🔥. The AI Predictions Are Spot On And The Stats Make Betting Way Easier. Real Lifesaver!",
+      "Playcope Is Actually Changing The Game 🔥. The AI Predictions Are Spot On And The Stats Make Preidicting Games Way Easier. Real Lifesaver!",
     name: "Tobi Ekundayo",
     role: "Social Media User",
     avatar: person4,

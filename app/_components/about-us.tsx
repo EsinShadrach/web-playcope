@@ -63,7 +63,7 @@ export function AboutUs() {
             </div>
             <div className="text-dark-grey md:text-base text-sm">
               Playcope is a football intelligence company built to help fans,
-              bettors, analysts, and brands see football in a smarter way. We
+              analysts, and brands see football in a smarter way. We
               believe football isn&apos;t just about the final whistle it&apos;s
               data, emotion, and patterns waiting to be understood. At Playcope,
               we turn complex football data into simple, powerful insights using

@@ -21,12 +21,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://playcope.com"),
   title: "Playcope | Football Intelligence Starts Here",
   description:
-    "Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way. Powered by AI and real match data.",
+    "Playcope is a football intelligence company built to help fans, analysts, and brands see football in a smarter way. Powered by AI and real match data.",
   keywords: [
     "Football",
     "AI",
     "Intelligence",
-    "Betting",
     "Analytics",
     "Predictions",
     "Playcope",
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Playcope | Football Intelligence Starts Here",
     description:
-      "Playcope is a football intelligence company built to help fans, bettors, analysts, and brands see football in a smarter way. Powered by AI and real match data.",
+      "Playcope is a football intelligence company built to help fans, analysts, and brands see football in a smarter way. Powered by AI and real match data.",
     url: "https://playcope.com",
     siteName: "Playcope",
     locale: "en_US",

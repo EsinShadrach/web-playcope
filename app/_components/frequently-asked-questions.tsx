@@ -81,7 +81,7 @@ export function FAQs() {
       ),
     },
     {
-      title: "Is Playcope focused on betting only?",
+      title: "Is Playcope focused on predictions only?",
       subtitle: (
         <span>
           No.
