@@ -185,7 +185,9 @@ export function HomeHero() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const [videoSrc, setVideoSrc] = useState<string>("");
+  const [videoSrc, setVideoSrc] = useState<string>(
+    "/new/hero-video-optimized.mp4"
+  );
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -195,8 +197,6 @@ export function HomeHero() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Lazy load the video source when it becomes visible
-            setVideoSrc("/new/hero-video-optimized.mp4");
             videoElement.play().catch(() => {
               // Auto-play was prevented
             });
@@ -214,6 +214,15 @@ export function HomeHero() {
       observer.disconnect();
     };
   }, []);
+
+  // Resume background video when exiting fullscreen
+  useEffect(() => {
+    if (!isFullscreen && videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Handle potential autoplay blocking
+      });
+    }
+  }, [isFullscreen]);
 
   return (
     <section id="top" className="min-h-screen mt-12 md:mt-24 overflow-x-clip">
@@ -365,9 +374,11 @@ export function HomeHero() {
 
           <video
             ref={videoRef}
-            muted={isMuted} // Controlled by state
+            autoPlay
+            muted={isMuted}
             loop
             playsInline
+            poster="/new/hero-video-poster.jpg"
             className="z-10 absolute top-0 left-0"
             style={{
               width: 1728,
@@ -376,7 +387,7 @@ export function HomeHero() {
               clipPath: PANORAMA_CLIP_PATH,
             }}
           >
-            {videoSrc && <source src={videoSrc} type="video/mp4" />}
+            <source src={videoSrc} type="video/mp4" />
           </video>
           {/* Transparent overlay for click detection on the video area */}
           <div

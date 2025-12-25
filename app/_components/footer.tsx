@@ -8,7 +8,7 @@ import {
   XLogo,
 } from "@/brand/components/icons";
 import intelligenceStartsHere from "@/public/new/intelligence-bg.png";
-import intelligenceEllipse from "@/public/new/intelligence-ellipses.png";
+import intelligenceEllipse from "@/public/new/intelligence-ellipses.webp";
 import Image from "next/image";
 import { SocialMediasStack } from "./playcope-vision";
 import { motion } from "framer-motion";
